@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleGame.css"> 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">   
+    
+    <title>Welcome to the game!</title>
+</head>
+<body>  
+    <h1>ROCKS PAPERS SCISSORS</h1>
+     <a id="quit" href="results.html">QUIT</a>
+    <div class="container">
+        <div class="buttons">
+            <button id="rock" class="button"><img class="img"  src=images/rock.jpg></button>
+            <button id="paper" class="button"><img class="img"  src=images/paper.jpg></button>
+            <button id="scissors" class="button"><img class="img" src=images/scissors.jpg></button>
+        </div>
+        <div id="vs">VS</div>
+        <div class="reveal"><img id="toReveal" src=images/toreveal.jpg></div>
+    </div>
+    <div id="counters">
+        <div class="counter" id = "playerContainer"> </div>
+        <div class="counter"> Draws: <div class="amount" id="draws"></div></div>
+        <div class="counter"> Computer:<div class="amount" id="losses"></div></div>    
+    </div>
+   
+<script src="scriptGame.js"></script>
+</body>
+</html>

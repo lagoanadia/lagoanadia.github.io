@@ -1,0 +1,71 @@
+:root 
+{
+  --color-bg: #1E3A8A;
+  --color-surface: #3B82F6;
+  --color-accent: #FBBF24;
+  --color-text: #F8FAFC;
+  --color-text-on-accent: #1E3A8A;
+  --color-win: #10B981;
+  --color-lose: #EF4444;
+}
+h1
+{
+  color:white;
+  justify-self: center;
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 90px;
+}
+body
+{
+  background: var(--color-bg);
+}
+.container 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;       
+         
+}
+#winnerMsg 
+{
+  display: inline-flex;        
+  align-items: center;         
+  justify-content: center;     
+  
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  text-decoration: none;       
+  
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 2rem;             
+  
+  padding: 30px 60px;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 0 10px var(--color-accent);     
+}
+
+a 
+{
+  display: inline-flex;        
+  align-items: center;        
+  justify-content: center;     
+  
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  text-decoration: none;      
+  
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 2rem;            
+  
+  padding: 10px 60px;
+  margin: 100px;
+  border: 3px solid var(--color-accent);
+  border-radius: 100px; 
+  transition: transform 0.5s ease;        
+}
+a:hover
+{
+  transform: scale(1.1);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <title>Tic Tac Toe</title>
+</head>
+<body onload="setUp()">
+       <a id="quit" class="restart-btn" href="results.html">QUIT</a>
+    <h1>TIC TAC TOE</h1>
+
+    <div class="container">
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+         
+            <div class="score-item">
+                <span class="score-label">X</span>
+                <span id="scoreX" class="score-value">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Draws</span>
+                <span id="scoreDraw" class="score-value">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">O</span>
+                <span id="scoreO" class="score-value">0</span>
+            </div>
+        </div>
+
+        <!-- Status message -->
+        <div id="status" class="status">X's turn</div>
+
+        <!-- Board -->
+        <table id="table">
+            <tr>
+                <td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td>
+            </tr>
+        </table>
+
+        <!-- Restart button -->
+        <button id="restart" class="restart-btn">Restart</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

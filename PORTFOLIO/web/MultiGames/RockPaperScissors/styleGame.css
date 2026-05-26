@@ -1,0 +1,138 @@
+:root {
+  --color-bg: #1E3A8A;
+  --color-surface: #3B82F6;
+  --color-accent: #FBBF24;
+  --color-text: #F8FAFC;
+  --color-text-on-accent: #1E3A8A;
+  --color-win: #10B981;
+  --color-lose: #EF4444;
+}
+
+body
+{
+font-family: "Bungee Inline", sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+background: var(--color-bg);
+color: var(--color-text);
+overflow: hidden;
+}
+
+h1
+{
+    margin: 20px;
+    font-size:90px;
+    text-align: center;
+}
+
+
+#quit
+{
+    text-decoration: none;
+    color: var(--color-text-on-accent);
+    background-color: var(--color-accent);
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 100px;
+}
+#quit:hover
+{
+    background-color: var(--color-win);
+    color: var(--color-bg);
+}
+.container
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.buttons
+{
+    display: flex;
+    flex-direction: column;   
+}
+
+
+.button
+{
+    margin: 5px; 
+    border-radius: 50%;
+    border: 5px, solid rgb(255, 255, 255);
+    transition: transform 0.1s ease;
+}
+.button:hover
+{
+    transform: scale(0.8); 
+}
+.img 
+{
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%;  
+}
+
+
+#toReveal
+{
+    width:300px;
+    height: 300px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 100px;
+    border-radius: 200px;
+    border:solid 5px var(--color-text);  
+}
+
+#vs
+{
+    align-self: center;
+    justify-self: center;
+    margin: 100px;
+    font-size: 120px;
+    font-style: italic;
+    font-family: "Arial", sans-serif;
+}
+
+#counters
+{
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-top: 30px;
+    padding: 20px;
+    width: 1000px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-accent);
+    color:#1E3A8A;
+    
+    
+    border-radius: 10px 40px 20px ;
+}
+.counter
+{
+    margin: 0px 130px;
+  flex-wrap: nowrap;
+   
+}
+.amount
+{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.lightPlayer
+{
+    color: var(--color-win);   
+}
+.lightComputer
+{
+    color: var(--color-lose);
+}

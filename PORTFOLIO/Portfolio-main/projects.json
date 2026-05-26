@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Proyecto X",
+    "description": "A household task management app built around Java OOP principles.",
+    "tags": ["Java", "OOP"],
+    "url": "https://github.com/lagoanadia/Proyecto-X"
+  },
+  {
+    "title": "Twitter Replica",
+    "description": "A Twitter-like interface with randomly generated posts.",
+    "tags": ["JavaScript", "DOM"],
+    "url": "../web/Twitter/index.html"
+  },
+  {
+    "title": "Profile Upload Demo",
+    "description": "File handling and real-time profile picture preview.",
+    "tags": ["JavaScript", "CSS", "File API"],
+    "url": "../web/Upload/index.html"
+  },
+  {
+    "title": "MultiGames",
+    "description": "Two browser games in one site. State management and game loop logic.",
+    "tags": ["JavaScript", "CSS"],
+    "url": "../web/MultiGames/index.html"
+  },
+  {
+    "title": "TicTacToe Java",
+    "description": "Classic game from scratch. Win detection and turn management.",
+    "tags": ["JavaScript", "HTML"],
+    "url": "java.html"
+  },
+  {
+    "title": "Calculator Java",
+    "description": "A calculator built in Java. First structured OOP program.",
+    "tags": ["Java", "OOP"],
+    "url": "java.html"
+    
+  },
+  {
+    "title": "Lightbulbs",
+    "description": "A simple exercise to learn about DOM manipulation.",
+    "tags": ["HTML", "DOM", "JS"],
+    "url": "../../web/Lightbulbs/index.html"
+
+  }
+]

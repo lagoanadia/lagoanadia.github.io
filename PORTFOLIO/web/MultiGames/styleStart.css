@@ -1,0 +1,82 @@
+:root {
+  --color-bg: #1E3A8A;
+  --color-surface: #3B82F6;
+  --color-accent: #FBBF24;
+  --color-text: #F8FAFC;
+  --color-text-on-accent: #1E3A8A;
+  --color-win: #10B981;
+  --color-lose: #EF4444;
+}
+body
+{
+  background: var(--color-bg); 
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 2rem;
+  overflow: hidden; 
+}
+
+.container 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;             
+}
+
+h1
+{
+  color:white;
+  justify-self: center;
+  font-size: 90px;
+}
+
+span
+{
+  color: white;
+}
+
+textarea
+{
+  height: 50px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: var(--color-accent);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-text-on-accent);
+  font-weight: bold;
+
+  resize: none;
+  overflow: hidden;
+}
+textarea:focus
+{
+  outline: none;
+  box-shadow: 0 0 10px var(--color-accent);
+}
+
+a 
+{
+  display: inline-flex;        
+  align-items: center;        
+  justify-content: center;     
+  
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  text-decoration: none;      
+  
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 2rem;            
+  
+  padding: 10px 60px;
+  margin: 100px;
+  border: 3px solid var(--color-accent);
+  border-radius: 100px;         
+  transition: transform 0.5s ease;        
+}
+a:hover
+{
+  transform: scale(1.1);
+}

@@ -1,0 +1,200 @@
+:root
+{
+    --color-bg: #EAC696;
+    --color-accent: #2c1a03;
+    --color-text-on-accent: #C8AE7D;
+    --color-shadow: #765827;
+}
+
+.rye-regular 
+{
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body
+{
+    background: url("images/desert.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: "Rye", serif;
+    color: var(--color-shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+#quit
+{
+    
+}
+h1
+{
+    font-size: clamp(2rem, 5vw, 5rem);
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Scoreboard */
+.scoreboard
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+
+    background: rgba(20, 10, 0, 0.689);
+    backdrop-filter: blur(6px);
+
+    padding: 10px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px var(--color-shadow);
+
+    color: var(--color-text-on-accent);
+}
+
+.score-item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.score-label
+{
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.score-value
+{
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+/* Status */
+.status
+{
+    background: rgba(20, 10, 0, 0.689);
+    backdrop-filter: blur(6px);
+    color: var(--color-text-on-accent);
+
+    padding: 10px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px var(--color-shadow);
+
+    font-size: 1.4rem;
+    text-align: center;
+    min-width: 300px;
+}
+
+/* Board */
+table
+{
+    height: 400px;
+    width: 400px;
+
+    table-layout: fixed;
+
+    border-spacing: 10px;
+    border-collapse: separate;
+
+    backdrop-filter: blur(6px);
+    background: rgba(20, 10, 0, 0.689);
+
+    padding: 15px;
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px var(--color-shadow);
+}
+
+td
+{
+    width: 120px;
+    height: 120px;
+
+    font-size: 4rem;
+    line-height: 1;
+
+    border-radius: 16px;
+    text-align: center;
+    vertical-align: middle;
+
+    background: var(--color-accent);
+    color: var(--color-text-on-accent);
+
+    transition: 0.2s ease;
+}
+
+td:hover
+{
+    transform: scale(1.03);
+    background: rgba(70, 40, 10, 0.95);
+    cursor: pointer;
+}
+
+td:active
+{
+    cursor: grabbing;
+}
+
+.unactive
+{
+    color: var(--color-accent);
+}
+
+/* Restart button */
+.restart-btn
+{
+    font-family: "Rye", serif;
+    font-size: 1.2rem;
+
+    background: var(--color-accent);
+    color: var(--color-text-on-accent);
+
+    padding: 10px 30px;
+    border: none;
+    border-radius: 12px;
+
+    box-shadow: 0 0 20px var(--color-shadow);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.restart-btn:hover
+{
+    transform: scale(1.05);
+    background: rgba(70, 40, 10, 0.95);
+}
+/* Winning cells */
+td.winning
+{
+    background: #C8AE7D;
+    color: var(--color-accent);
+    box-shadow: 0 0 25px #f0d9a8, 0 0 50px #C8AE7D;
+    animation: pulse 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes pulse
+{
+    from { transform: scale(1); }
+    to   { transform: scale(1.08); }
+}

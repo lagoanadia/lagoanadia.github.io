@@ -1,0 +1,61 @@
+body
+{
+    background: rgb(239, 234, 234);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.profilePicture
+{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+.profile
+{
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    background: rgb(160, 159, 159);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label
+{
+    width: 300px;
+    height: 50px;
+    background-color: rgb(144, 31, 31);
+    border-radius: 30px;
+    text-align: center; /* x-axe */
+    align-content: center; /* y-axe */
+    font-size: 25px;
+    transition: transform 0.5s ease
+}
+label:active
+{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+label:hover
+{
+    cursor: pointer;
+}
+input
+{
+    display: none;    
+}
+.username
+{
+    margin: 20px;
+    font-size: 30px;
+}
+h1
+{
+color: black;
+}

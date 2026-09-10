@@ -1,5 +1,11 @@
 [
   {
+    "title": "Kooky",
+    "description": "A recipe finder that turns loose fridge ingredients into real recipes, with AI-generated cooking tips.",
+    "tags": ["React", "Node.js", "AI"],
+    "url": "https://kooky-psi.vercel.app"
+  },
+  {
     "title": "Proyecto X",
     "description": "A household task management app built around Java OOP principles.",
     "tags": ["Java", "OOP"],

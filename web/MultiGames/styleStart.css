@@ -9,25 +9,32 @@
 }
 body
 {
-  background: var(--color-bg); 
+  background: var(--color-bg);
   font-family: "Bungee Inline", sans-serif;
   font-size: 2rem;
-  overflow: hidden; 
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
-.container 
+.container
 {
   display: flex;
   flex-direction: column;
-  justify-content: center;  
-  align-items: center;             
+  justify-content: center;
+  align-items: center;
+  gap: clamp(16px, 6vw, 40px);
+  width: 100%;
 }
 
 h1
 {
   color:white;
   justify-self: center;
-  font-size: 90px;
+  font-size: clamp(36px, 12vw, 90px);
+  text-align: center;
 }
 
 span
@@ -38,7 +45,7 @@ span
 textarea
 {
   height: 50px;
-  width: 400px;
+  width: min(400px, 100%);
   border-radius: 20px;
   background-color: var(--color-accent);
 
@@ -57,24 +64,26 @@ textarea:focus
   box-shadow: 0 0 10px var(--color-accent);
 }
 
-a 
+a
 {
-  display: inline-flex;        
-  align-items: center;        
-  justify-content: center;     
-  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   background: var(--color-accent);
   color: var(--color-text-on-accent);
-  text-decoration: none;      
-  
+  text-decoration: none;
+
   font-family: "Bungee Inline", sans-serif;
-  font-size: 2rem;            
-  
-  padding: 10px 60px;
-  margin: 100px;
+  font-size: clamp(1.1rem, 4vw, 2rem);
+
+  padding: clamp(10px, 3vw, 16px) clamp(20px, 6vw, 60px);
+  width: min(320px, 100%);
+  box-sizing: border-box;
   border: 3px solid var(--color-accent);
-  border-radius: 100px;         
-  transition: transform 0.5s ease;        
+  border-radius: 100px;
+  transition: transform 0.5s ease;
 }
 a:hover
 {

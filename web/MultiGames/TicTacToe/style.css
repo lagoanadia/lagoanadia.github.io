@@ -30,7 +30,9 @@ body
 
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 12px;
+    box-sizing: border-box;
 }
 #quit
 {
@@ -57,7 +59,7 @@ h1
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 400px;
+    width: min(400px, 92vw);
 
     background: rgba(20, 10, 0, 0.689);
     backdrop-filter: blur(6px);
@@ -103,14 +105,14 @@ h1
 
     font-size: 1.4rem;
     text-align: center;
-    min-width: 300px;
+    min-width: min(300px, 90vw);
 }
 
 /* Board */
 table
 {
-    height: 400px;
-    width: 400px;
+    height: clamp(240px, 85vw, 400px);
+    width: clamp(240px, 85vw, 400px);
 
     table-layout: fixed;
 
@@ -128,10 +130,10 @@ table
 
 td
 {
-    width: 120px;
-    height: 120px;
+    width: clamp(70px, 25vw, 120px);
+    height: clamp(70px, 25vw, 120px);
 
-    font-size: 4rem;
+    font-size: clamp(2.2rem, 8vw, 4rem);
     line-height: 1;
 
     border-radius: 16px;

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Larder — Resumen de producto</title>
+<meta name="description" content="Resumen de producto: problema, competencia, solución, mercado y roadmap de Larder.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  :root{
+    --paper:#F2EFE7;
+    --paper-2:#E9E4D6;
+    --ink:#1F2A1F;
+    --ink-soft:#5B6559;
+    --line: rgba(31,42,31,0.14);
+    --forest:#33513A;
+    --forest-2:#26402C;
+    --amber:#C6821E;
+    --amber-soft:#EFD9AE;
+    --card:#FBFAF5;
+    --shadow: 0 1px 0 rgba(31,42,31,0.06);
+    --accent-contrast:#FBFAF5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#161B16;
+      --paper-2:#1D231D;
+      --ink:#ECEAE0;
+      --ink-soft:#A9B2A4;
+      --line: rgba(236,234,224,0.14);
+      --forest:#6FA37B;
+      --forest-2:#4C7B57;
+      --amber:#E3A94A;
+      --amber-soft:#3A2F1C;
+      --card:#1D231D;
+      --shadow: 0 1px 0 rgba(0,0,0,0.3);
+      --accent-contrast:#161B16;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#161B16;
+    --paper-2:#1D231D;
+    --ink:#ECEAE0;
+    --ink-soft:#A9B2A4;
+    --line: rgba(236,234,224,0.14);
+    --forest:#6FA37B;
+    --forest-2:#4C7B57;
+    --amber:#E3A94A;
+    --amber-soft:#3A2F1C;
+    --card:#1D231D;
+    --shadow: 0 1px 0 rgba(0,0,0,0.3);
+    --accent-contrast:#161B16;
+  }
+
+  *{box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; color-adjust:exact;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Public Sans', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media print{
+    body{background:var(--paper) !important;}
+    .ticker{position:static;}
+    section{break-inside:avoid-page;}
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+  section{padding-block: clamp(48px,7vw,88px);}
+  h1,h2,h3{font-family:'Fraunces', Georgia, serif; text-wrap:balance; margin:0;}
+  .num{font-family:'IBM Plex Mono', ui-monospace, monospace; font-variant-numeric:tabular-nums;}
+
+  /* ---------- top receipt strip ---------- */
+  .ticker{
+    border-bottom:1px dashed var(--line);
+    padding-block:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.08em;
+    color:var(--ink-soft); text-transform:uppercase;
+    display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding-top:clamp(56px,9vw,110px);}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--forest); font-weight:600;
+    display:flex; align-items:center; gap:10px; margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--forest);display:inline-block;}
+  .hero h1{
+    font-size:clamp(48px,9vw,92px); font-weight:600; line-height:.94; letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .hero .tagline{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
+    font-size:clamp(19px,2.4vw,25px); color:var(--forest-2); max-width:34ch; margin-top:22px; line-height:1.4;
+  }
+  .hero .meta{margin-top:34px; display:flex; gap:22px; flex-wrap:wrap; font-size:14px; color:var(--ink-soft);}
+  .hero .meta b{color:var(--ink); font-weight:600;}
+
+  /* ---------- section heading ---------- */
+  .head{max-width:56ch; margin-bottom:36px;}
+  .head h2{font-size:clamp(28px,4vw,38px); font-weight:600; line-height:1.15;}
+  .head p{margin-top:14px; color:var(--ink-soft); font-size:16.5px; line-height:1.6;}
+
+  hr.rule{border:none; border-top:1px dashed var(--line); margin:0;}
+
+  /* ---------- stat row ---------- */
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:4px; overflow:hidden;}
+  .stat{background:var(--card); padding:26px 22px; display:flex; flex-direction:column; gap:6px;}
+  .stat .v{font-size:clamp(30px,4vw,40px); font-weight:600; color:var(--forest-2);}
+  .stat .l{font-size:13.5px; color:var(--ink-soft); line-height:1.4;}
+  .stat.hi{background:var(--forest);}
+  .stat.hi .v{color:var(--accent-contrast);}
+  .stat.hi .l{color:color-mix(in srgb, var(--accent-contrast) 78%, transparent);}
+  @media (max-width:640px){.stats{grid-template-columns:1fr;}}
+
+  .foot-note{margin-top:16px; font-size:13.5px; color:var(--ink-soft); font-style:italic;}
+
+  /* ---------- comparison list ---------- */
+  .compare{border-top:1px solid var(--line);}
+  .row{display:grid; grid-template-columns:180px 1fr; gap:28px; padding:20px 0; border-bottom:1px solid var(--line);}
+  .row .who{font-weight:600; font-size:16px;}
+  .row .who small{display:block; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:11.5px; color:var(--amber); letter-spacing:.06em; margin-top:4px;}
+  .row .why{color:var(--ink-soft); font-size:15px; line-height:1.55;}
+  @media (max-width:640px){.row{grid-template-columns:1fr; gap:6px;}}
+
+  blockquote{
+    margin:34px 0 0; padding:26px 28px; background:var(--paper-2); border-left:3px solid var(--amber);
+    border-radius:2px; font-family:'Fraunces', serif; font-style:italic; font-size:19px; line-height:1.55; color:var(--ink);
+  }
+
+  /* ---------- process ---------- */
+  .flow{display:grid; grid-template-columns:repeat(4,1fr); gap:0; counter-reset:step; position:relative;}
+  .flow::before{
+    content:""; position:absolute; top:34px; left:6%; right:6%; height:1px;
+    background:repeating-linear-gradient(to right, var(--line) 0 8px, transparent 8px 14px);
+    z-index:0;
+  }
+  .step{position:relative; z-index:1; padding-right:18px;}
+  .step .n{
+    width:46px;height:46px;border-radius:50%; background:var(--card); border:1.5px solid var(--forest);
+    color:var(--forest-2); font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:16px;
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+  }
+  .step h3{font-size:17.5px; font-weight:600; margin-bottom:8px;}
+  .step p{margin:0; font-size:14.5px; color:var(--ink-soft); line-height:1.55;}
+  @media (max-width:760px){
+    .flow{grid-template-columns:1fr 1fr; row-gap:32px;}
+    .flow::before{display:none;}
+  }
+  @media (max-width:460px){.flow{grid-template-columns:1fr;}}
+
+  /* ---------- funnel ---------- */
+  .funnel{display:flex; flex-direction:column; gap:10px;}
+  .flevel{display:grid; grid-template-columns:200px 1fr 130px; align-items:center; gap:18px; padding:16px 20px; background:var(--card); border:1px solid var(--line); border-radius:3px;}
+  .flevel .bar{height:8px; border-radius:4px; background:var(--paper-2); position:relative; overflow:hidden;}
+  .flevel .bar i{position:absolute; inset:0; background:var(--forest); border-radius:4px;}
+  .flevel .lbl{font-size:14.5px; color:var(--ink-soft);}
+  .flevel .val{font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:16px; text-align:right; color:var(--ink);}
+  @media (max-width:640px){
+    .flevel{grid-template-columns:1fr; text-align:left; gap:8px;}
+    .flevel .val{text-align:left;}
+  }
+  .funnel-note{margin-top:14px; font-size:13.5px; color:var(--ink-soft);}
+
+  /* ---------- roadmap ---------- */
+  .road{border-left:1px dashed var(--line); margin-left:6px;}
+  .rstep{position:relative; padding:0 0 34px 32px;}
+  .rstep:last-child{padding-bottom:0;}
+  .rstep::before{
+    content:attr(data-n); position:absolute; left:-13px; top:0; width:26px;height:26px;border-radius:50%;
+    background:var(--amber); color:var(--accent-contrast); font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .rstep h3{font-size:16.5px; font-weight:600; margin-bottom:6px;}
+  .rstep p{margin:0; font-size:14.5px; color:var(--ink-soft); line-height:1.55; max-width:56ch;}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);}
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+  @media (max-width:640px){.cols{grid-template-columns:1fr;}}
+  .gloss dt{font-weight:600; font-size:14.5px; margin-top:14px;}
+  .gloss dt:first-child{margin-top:0;}
+  .gloss dd{margin:3px 0 0; font-size:14px; color:var(--ink-soft); line-height:1.5;}
+  .srcs a{color:var(--forest-2); text-decoration:none; border-bottom:1px solid var(--line); font-size:13.5px; word-break:break-all;}
+  .srcs a:hover{border-color:var(--forest-2);}
+  .srcs li{margin-top:12px;}
+  .srcs .lbl{display:block; font-size:13.5px; color:var(--ink); font-weight:600; margin-bottom:2px;}
+  footer .colophon{margin-top:44px; padding-top:22px; border-top:1px dashed var(--line); font-size:12.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+</style>
+</head>
+<body>
+
+<div class="ticker">
+  <span>LARDER · RESUMEN DE PRODUCTO</span>
+  <span>A CORUÑA · SEPTIEMBRE 2026</span>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">Resumen de producto</div>
+    <h1>Larder</h1>
+    <p class="tagline">La lista de la compra se genera sola a partir de lo que hay en tu nevera.</p>
+    <div class="meta">
+      <span><b>Público</b> · estudiantes en piso compartido</span>
+      <span><b>Mercado inicial</b> · A Coruña</span>
+      <span><b>Coste</b> · 0€ para quien lo usa</span>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="head">
+      <h2>Compartir piso significa perder tiempo y dinero en la compra</h2>
+      <p>Se hace la lista a ojo, alguien va a la tienda sin saber bien qué queda en casa, y el resultado son compras duplicadas o viajes de vuelta por algo olvidado. Un problema pequeño cada vez — pero constante.</p>
+    </div>
+    <div class="stats">
+      <div class="stat hi"><span class="v num">200–400€</span><span class="l">perdidos al año por hogar en compras mal planificadas</span></div>
+      <div class="stat"><span class="v num">74%</span><span class="l">compró algo duplicado el último mes</span></div>
+      <div class="stat"><span class="v num">74%</span><span class="l">volvió a la tienda por algo olvidado</span></div>
+    </div>
+    <p class="foot-note">Encuesta propia, 35 respuestas (ES/EN) sobre hechos del último mes, no opiniones sobre una app futura — el 54% sufrió ambos problemas en el mismo mes.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="head">
+      <h2>Las apps de listas ya existen. El problema no se ha resuelto.</h2>
+      <p>En la misma encuesta, el 0% usa hoy una app específica — y de las 3 personas que llegaron a probar una, ninguna la sigue usando.</p>
+    </div>
+    <div class="compare">
+      <div class="row">
+        <div class="who">Papel y boli</div>
+        <div class="why">Rápido, pero se pierde fácil y no se comparte con el resto del piso.</div>
+      </div>
+      <div class="row">
+        <div class="who">Notas del móvil</div>
+        <div class="why">La opción más usada en la práctica — pero no se coedita en tiempo real entre convivientes.</div>
+      </div>
+      <div class="row">
+        <div class="who">Bring!<small>4.7★ · App Store</small></div>
+        <div class="why">Comparte la lista en tiempo real, pero con fricción al añadir cada item — y su sección "Inspiración" apunta a recetas, no a saber qué hay en casa.</div>
+      </div>
+      <div class="row">
+        <div class="who">AnyList<small>4.6★ · App Store</small></div>
+        <div class="why">Reconocimiento inteligente al escribir, pero todo el valor añadido (recetas, meal planning) apunta a cocinar — no a compartir la nevera.</div>
+      </div>
+    </div>
+    <blockquote>El hueco real no es "una lista más bonita" — de hecho, ambas apps están bien valoradas. Es una herramienta tan rápida como Notas, tan colaborativa como Bring!, que además muestra qué hay en casa sin que nadie tenga que contarlo a mano.</blockquote>
+
+    <div class="head" style="margin-top:56px;">
+      <h2 style="font-size:26px;">¿Y si tu app no tiene nada "chulo"?</h2>
+      <p>La objeción que hay que anticipar antes de que la haga alguien: "tu solución (Notas) no tiene recetas, meal planning ni agentes de IA."</p>
+    </div>
+    <div class="stats" style="grid-template-columns:1fr 1fr;">
+      <div class="stat">
+        <span class="l" style="font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--forest-2);font-weight:600;margin-bottom:4px;">Para quién sí tiene sentido</span>
+        <span class="l">Alguien a quien de verdad le guste cocinar y guardar recetas — un perfil más asentado, quizá de más edad.</span>
+      </div>
+      <div class="stat">
+        <span class="l" style="font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--amber);font-weight:600;margin-bottom:4px;">Para nuestro público, no</span>
+        <span class="l">El estudiante medio no es un apasionado de la cocina — el "meal prep" de moda va al revés: cocinar lo mínimo posible. Confirmado en la encuesta: <em>"compro cosas pensando en hacer comidas elaboradas pero nunca las llego a hacer, y acaban pudriéndose."</em></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="head">
+      <h2>No mantienes una lista. Mantienes tu nevera — y la lista sale sola.</h2>
+      <p>Larder invierte el orden: en vez de escribir lo que falta, el hogar marca en un toque lo que hay.</p>
+    </div>
+    <div class="flow">
+      <div class="step">
+        <div class="n">01</div>
+        <h3>Fridge</h3>
+        <p>3 estados — bien / queda poco / se acabó — sin cantidades ni contar unidades. Un toque, nada más.</p>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h3>List</h3>
+        <p>Sacando una foto al ticket de la compra, la lista se genera sola — sin teclear nada.</p>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h3>Compra en grupo</h3>
+        <p>Todo el piso ve al momento quién compra qué, en tiempo real, sin duplicados.</p>
+      </div>
+      <div class="step">
+        <div class="n">04</div>
+        <h3>History / Prices</h3>
+        <p>Queda quién compró qué, quién debe qué, y dónde sale más barato cada producto.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="head">
+      <h2>Lo que dice quien vive el problema</h2>
+      <p>Pregunta abierta de la encuesta: "¿qué es lo que más te frustra de gestionar la compra o la nevera?" — nadie vio el prototipo antes de responder.</p>
+    </div>
+    <div class="compare">
+      <div class="row">
+        <div class="who">Cooperación<small>8/35 · 23%</small></div>
+        <div class="why">"No sé quién compró qué" · "People eating my food" · "Que compran cosas que no quiero" — el tema más repetido, sin que se preguntara por él.</div>
+      </div>
+      <div class="row">
+        <div class="who">Tracker de gastos<small>12/35 · 34%</small></div>
+        <div class="why">"Que la gente no participe a la hora de hacer la compra o que tarden en pagar cuando dividimos gastos" — resuelto por History: quién compró qué y quién debe qué, sin que nadie lo apunte a mano.</div>
+      </div>
+      <div class="row">
+        <div class="who">Caducidad<small>3 menciones</small></div>
+        <div class="why">"Cuando la gente deja la comida en la nevera durante mucho tiempo y se estropea" — entra en el plan de construcción con un campo de frescura típica por categoría.</div>
+      </div>
+      <div class="row">
+        <div class="who">Se acaba y nadie avisa<small>Galicia</small></div>
+        <div class="why">"Pois supoño que cando algo se acabe ninguén avise" — resuelto gratis en cuanto Fridge es una vista compartida: marcar "se acabó" ya avisa a todo el piso.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="head">
+      <h2>Qué construimos, y qué no</h2>
+      <p>El giro de producto retira lo que un servicio externo gratuito ya resuelve mejor, y deja fuera lo que nadie os elegiría por construir.</p>
+    </div>
+    <div class="stats" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="stat">
+        <span class="l" style="font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--forest-2);font-weight:600;margin-bottom:6px;">Lo construimos</span>
+        <span class="l">Fridge de 3 estados · List que se genera sola, con concurrencia · History (quién debe qué) · Prices sobre el propio historial · Predicción de reposición</span>
+      </div>
+      <div class="stat">
+        <span class="l" style="font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--amber);font-weight:600;margin-bottom:6px;">Lo hace un servicio externo</span>
+        <span class="l">Diccionario de productos (Open Food Facts) · Lectura de tickets (Groq, único uso de IA) · Aviso de turno de compra (bot de Telegram)</span>
+      </div>
+      <div class="stat">
+        <span class="l" style="font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);font-weight:600;margin-bottom:6px;">No se hace este curso</span>
+        <span class="l">Escaneo de código de barras · Cobro real con tarjeta · Liquidar deudas de verdad · Notificaciones push nativas (Telegram es la excepción)</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="head">
+      <h2>Un punto de partida concreto, con margen para crecer</h2>
+      <p>El mercado se acota en tres niveles, desde la universidad hasta el hogar objetivo.</p>
+    </div>
+    <div class="funnel">
+      <div class="flevel">
+        <span class="lbl">Mercado total</span>
+        <span class="bar"><i style="width:100%"></i></span>
+        <span class="val num">&gt;13.300</span>
+      </div>
+      <div class="flevel">
+        <span class="lbl">Mercado accesible</span>
+        <span class="bar"><i style="width:31%"></i></span>
+        <span class="val num">≈4.123</span>
+      </div>
+      <div class="flevel">
+        <span class="lbl">Mercado objetivo</span>
+        <span class="bar"><i style="width:5%"></i></span>
+        <span class="val num">≈650 pisos</span>
+      </div>
+    </div>
+    <p class="funnel-note">Estudiantes matriculados en la UDC → los que vienen de fuera a estudiar (31%, Fundación CYD) → los que comparten piso (55%, ÷3,5 personas/piso). Coste fijo del producto: <b class="num">0€</b> — stack construido sobre niveles gratuitos.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="head">
+      <h2>De la idea validada al producto en uso</h2>
+    </div>
+    <div class="road">
+      <div class="rstep" data-n="1"><h3>Fridge</h3><p>Terminar la pantalla de la nevera con el modelo de 3 estados, sin cantidades.</p></div>
+      <div class="rstep" data-n="2"><h3>Backend real</h3><p>Base de datos persistente (Postgres) sustituyendo el estado local del prototipo.</p></div>
+      <div class="rstep" data-n="3"><h3>List</h3><p>Generación automática con control de concurrencia — dos personas marcando a la vez.</p></div>
+      <div class="rstep" data-n="4"><h3>History / Prices</h3><p>Lectura automática de tickets de compra y comparador de precios sobre el historial propio.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <section>
+      <div class="cols">
+        <div>
+          <h3 style="font-size:15px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase;margin-bottom:16px;">Glosario</h3>
+          <dl class="gloss">
+            <dt>Fridge</dt><dd>Nevera compartida del hogar. 3 estados (bien / queda poco / se acabó), sin cantidades.</dd>
+            <dt>List</dt><dd>Se genera sola a partir de los productos marcados "se acabó" en Fridge.</dd>
+            <dt>History</dt><dd>Historial de compras del hogar: quién compró qué y quién debe qué.</dd>
+            <dt>Prices</dt><dd>Comparador de precios por tienda, sobre el propio historial de compras.</dd>
+          </dl>
+        </div>
+        <div>
+          <h3 style="font-size:15px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase;margin-bottom:16px;">Fuentes</h3>
+          <ul class="srcs" style="list-style:none;padding:0;margin:0;">
+            <li><span class="lbl">Tamaño medio del hogar en España (INE, 2023)</span><a href="https://www.ine.es/jaxiT3/Tabla.htm?t=60132" target="_blank" rel="noopener">ine.es/jaxiT3/Tabla.htm?t=60132</a></li>
+            <li><span class="lbl">Población de A Coruña (INE/IGE, 2024)</span><a href="https://hoydiario.es/noticias/galicia/demografia/poblacion-coruna-ine-2024.html" target="_blank" rel="noopener">hoydiario.es — población A Coruña</a></li>
+            <li><span class="lbl">% que cambia de ciudad para estudiar</span><a href="https://www.fundacioncyd.org/" target="_blank" rel="noopener">fundacioncyd.org</a></li>
+            <li><span class="lbl">Bring! Grocery Shopping List</span><a href="https://apps.apple.com/us/app/bring-grocery-shopping-list/id580669177" target="_blank" rel="noopener">App Store — Bring!</a></li>
+            <li><span class="lbl">AnyList: Grocery Shopping List</span><a href="https://justuseapp.com/en/app/522167641/anylist-grocery-shopping-list/reviews" target="_blank" rel="noopener">justuseapp.com — AnyList</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="colophon">
+        <span>Encuesta propia: 35 respuestas únicas, ES/EN, hasta el 17/09/2026.</span>
+        <span>Matriculados UDC: dato directo, curso 2025–26.</span>
+      </div>
+    </section>
+  </footer>
+
+</div>
+</body>
+</html>

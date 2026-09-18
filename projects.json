@@ -1,5 +1,11 @@
 [
   {
+    "title": "Larder",
+    "description": "Product overview for a shared-fridge grocery app: the lista de la compra generates itself from what's actually in your fridge. Proyecto Transversal (2º DAM).",
+    "tags": ["Product Design", "React", "TypeScript"],
+    "url": "larder/index.html"
+  },
+  {
     "title": "Kooky",
     "description": "A recipe finder that turns loose fridge ingredients into real recipes, with AI-generated cooking tips.",
     "tags": ["React", "Node.js", "AI"],

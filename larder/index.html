@@ -65,10 +65,20 @@
     .ticker{position:static;}
     section{padding-block:22px;}
     .hero{break-before:avoid;}
-    .head, .stats, .stat, .compare, .row, blockquote, .flow, .step,
+    .head, .stats, .stat, .compare, .row, blockquote, .step,
     .funnel, .flevel, .rstep, .cols, .gloss, .srcs{
       break-inside:avoid; page-break-inside:avoid;
     }
+    /* CSS grid fragments unpredictably when printed — force the 4-step
+       diagram to a simple stacked block for print so it can never be
+       cut mid-card, instead of relying on break-inside on a grid. */
+    .flow{display:block !important;}
+    .flow::before{display:none;}
+    .step{
+      display:block; padding:14px 0; border-bottom:1px dashed var(--line);
+      break-inside:avoid; page-break-inside:avoid;
+    }
+    .step:last-child{border-bottom:none;}
     hr.rule{display:none;}
     section + section{border-top:1px solid var(--line); margin-top:6px;}
   }

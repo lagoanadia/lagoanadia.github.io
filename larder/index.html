@@ -60,27 +60,34 @@
     -webkit-font-smoothing:antialiased;
   }
   @media print{
-    @page{margin:14mm 12mm;}
+    @page{margin:10mm 12mm;}
     body{background:var(--paper) !important;}
-    .ticker{position:static;}
-    section{padding-block:22px;}
-    .hero{break-before:avoid;}
-    .head, .stats, .stat, .compare, .row, blockquote, .step,
-    .funnel, .flevel, .rstep, .cols, .gloss, .srcs{
+    .ticker{display:none;}
+    .wrap{max-width:100%;}
+    section{padding-block:12px;}
+    .head{margin-bottom:16px;}
+    .head p{margin-top:8px;}
+    .hero{padding-top:10px;}
+    /* Avoid mid-element cuts on small pieces only — never on whole
+       sections, which forces big blocks to jump pages and leaves
+       large blank gaps behind them. */
+    .stat, .row, blockquote, .step, .flevel, .rstep{
       break-inside:avoid; page-break-inside:avoid;
     }
-    /* CSS grid fragments unpredictably when printed — force the 4-step
-       diagram to a simple stacked block for print so it can never be
-       cut mid-card, instead of relying on break-inside on a grid. */
-    .flow{display:block !important;}
+    /* Every CSS grid on this page fragments unpredictably when printed
+       (Chrome leaves a ghost background box behind on the page the
+       content moved off of) — force ALL of them to plain stacked
+       blocks for print, screen layout is untouched. */
+    .flow, .stats{display:block !important; background:none !important; border:none !important;}
     .flow::before{display:none;}
-    .step{
-      display:block; padding:14px 0; border-bottom:1px dashed var(--line);
-      break-inside:avoid; page-break-inside:avoid;
+    .stat{
+      display:block !important; border:1px solid var(--line); border-radius:4px;
+      margin-bottom:8px; break-inside:avoid; page-break-inside:avoid;
     }
+    .step{display:block; padding:8px 0; border-bottom:1px dashed var(--line);}
     .step:last-child{border-bottom:none;}
     hr.rule{display:none;}
-    section + section{border-top:1px solid var(--line); margin-top:6px;}
+    section + section{border-top:1px solid var(--line); margin-top:4px;}
   }
   .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
   section{padding-block: clamp(48px,7vw,88px);}
@@ -231,7 +238,7 @@
 
   <section>
     <div class="head">
-      <h2>Compartir piso significa perder tiempo y dinero en la compra</h2>
+      <h2>Compartir piso os sale caro — en tiempo y en dinero</h2>
       <p>Se hace la lista a ojo, alguien va a la tienda sin saber bien qué queda en casa, y el resultado son compras duplicadas o viajes de vuelta por algo olvidado. Un problema pequeño cada vez — pero constante.</p>
     </div>
     <div class="stats">

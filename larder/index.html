@@ -54,8 +54,8 @@
   }
 
   *{box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; color-adjust:exact;}
-  html{scrollbar-width:none; -ms-overflow-style:none;}
-  html::-webkit-scrollbar{display:none;}
+  html, body{scrollbar-width:none; -ms-overflow-style:none;}
+  html::-webkit-scrollbar, body::-webkit-scrollbar{display:none; width:0; height:0;}
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:'Public Sans', ui-sans-serif, system-ui, sans-serif;

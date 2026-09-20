@@ -74,6 +74,11 @@
     .stat, .row, blockquote, .step, .flevel, .rstep{
       break-inside:avoid; page-break-inside:avoid;
     }
+    /* No heading may ever be the last line on a page, orphaned from
+       the content it introduces — every h2/h3 on this page. Safe now
+       that the grids below are fixed to plain blocks (they can flow
+       right after a heading instead of jumping as one rigid unit). */
+    h2, h3, .head{ break-after:avoid; page-break-after:avoid; }
     /* Every CSS grid on this page fragments unpredictably when printed
        (Chrome leaves a ghost background box behind on the page the
        content moved off of) — force ALL of them to plain stacked
@@ -140,6 +145,7 @@
   @media (max-width:640px){.stats{grid-template-columns:1fr;}}
 
   .foot-note{margin-top:16px; font-size:13.5px; color:var(--ink-soft); font-style:italic;}
+  @media print{ .foot-note{ break-before:avoid; page-break-before:avoid; } }
 
   /* ---------- comparison list ---------- */
   .compare{border-top:1px solid var(--line);}
@@ -238,7 +244,7 @@
 
   <section>
     <div class="head">
-      <h2>Compartir piso os sale caro — en tiempo y en dinero</h2>
+      <h2>Así es como se hace la compra</h2>
       <p>Se hace la lista a ojo, alguien va a la tienda sin saber bien qué queda en casa, y el resultado son compras duplicadas o viajes de vuelta por algo olvidado. Un problema pequeño cada vez — pero constante.</p>
     </div>
     <div class="stats">

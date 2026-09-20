@@ -60,14 +60,16 @@
     -webkit-font-smoothing:antialiased;
   }
   @media print{
-    @page{margin:10mm 12mm;}
-    body{background:var(--paper) !important;}
+    @page{margin:8mm 10mm;}
+    body{background:var(--paper) !important; font-size:12.5px;}
     .ticker{display:none;}
     .wrap{max-width:100%;}
-    section{padding-block:12px;}
-    .head{margin-bottom:16px;}
-    .head p{margin-top:8px;}
-    .hero{padding-top:10px;}
+    section{padding-block:6px;}
+    .head{margin-bottom:10px;}
+    .head h2{font-size:19px;}
+    .head p{margin-top:4px; font-size:12px;}
+    .hero{padding-top:4px;}
+    .hero h1{font-size:46px;}
     /* Avoid mid-element cuts on small pieces only — never on whole
        sections, which forces big blocks to jump pages and leaves
        large blank gaps behind them. */
@@ -87,12 +89,15 @@
     .flow::before{display:none;}
     .stat{
       display:block !important; border:1px solid var(--line); border-radius:4px;
-      margin-bottom:8px; break-inside:avoid; page-break-inside:avoid;
+      margin-bottom:5px; padding:10px 14px !important; break-inside:avoid; page-break-inside:avoid;
     }
-    .step{display:block; padding:8px 0; border-bottom:1px dashed var(--line);}
+    .stat .v{font-size:20px !important;}
+    .row{padding:8px 0 !important;}
+    blockquote{margin:12px 0 0 !important; padding:12px 16px !important; font-size:14px !important;}
+    .step{display:block; padding:5px 0; border-bottom:1px dashed var(--line);}
     .step:last-child{border-bottom:none;}
     hr.rule{display:none;}
-    section + section{border-top:1px solid var(--line); margin-top:4px;}
+    section + section{border-top:1px solid var(--line); margin-top:2px;}
   }
   .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
   section{padding-block: clamp(48px,7vw,88px);}
@@ -244,7 +249,7 @@
 
   <section>
     <div class="head">
-      <h2>Así es como se hace la compra</h2>
+      <h2>La lista de la compra</h2>
       <p>Se hace la lista a ojo, alguien va a la tienda sin saber bien qué queda en casa, y el resultado son compras duplicadas o viajes de vuelta por algo olvidado. Un problema pequeño cada vez — pero constante.</p>
     </div>
     <div class="stats">

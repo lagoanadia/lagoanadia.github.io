@@ -321,17 +321,17 @@
       <div class="step">
         <div class="n">02</div>
         <h3>List</h3>
-        <p>Sacando una foto al ticket de la compra, la lista se genera sola — sin teclear nada.</p>
+        <p>Se genera sola en cuanto algo pasa a "se acabó" en Fridge — nadie escribe nada a mano.</p>
       </div>
       <div class="step">
         <div class="n">03</div>
         <h3>Compra en grupo</h3>
-        <p>Todo el piso ve al momento quién compra qué, en tiempo real, sin duplicados.</p>
+        <p>Al volver de la tienda, una foto al ticket basta: Fridge se actualiza solo con lo comprado, y todo el piso lo ve en tiempo real, sin duplicados.</p>
       </div>
       <div class="step">
         <div class="n">04</div>
-        <h3>History / Prices</h3>
-        <p>Queda quién compró qué, quién debe qué, y dónde sale más barato cada producto.</p>
+        <h3>Expenses</h3>
+        <p>Cada ticket queda registrado con lo comprado, cantidad y precio — de ahí sale quién debe qué, y dónde sale más barato cada producto.</p>
       </div>
     </div>
   </section>
@@ -350,7 +350,7 @@
       </div>
       <div class="row">
         <div class="who">Tracker de gastos<small>12/35 · 34%</small></div>
-        <div class="why">"Que la gente no participe a la hora de hacer la compra o que tarden en pagar cuando dividimos gastos" — resuelto por History: quién compró qué y quién debe qué, sin que nadie lo apunte a mano.</div>
+        <div class="why">"Que la gente no participe a la hora de hacer la compra o que tarden en pagar cuando dividimos gastos" — resuelto por Expenses: quién compró qué y quién debe qué, sin que nadie lo apunte a mano.</div>
       </div>
       <div class="row">
         <div class="who">Caducidad<small>3 menciones</small></div>
@@ -373,7 +373,7 @@
     <div class="stats" style="grid-template-columns:1fr 1fr 1fr;">
       <div class="stat">
         <span class="l" style="font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--forest-2);font-weight:600;margin-bottom:6px;">Lo construimos</span>
-        <span class="l">Fridge de 3 estados · List que se genera sola, con concurrencia · History (quién debe qué) · Prices sobre el propio historial · Predicción de reposición</span>
+        <span class="l">Fridge de 3 estados · List que se genera sola, con concurrencia · Expenses (quién debe qué y dónde sale más barato) · Predicción de reposición</span>
       </div>
       <div class="stat">
         <span class="l" style="font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--amber);font-weight:600;margin-bottom:6px;">Lo hace un servicio externo</span>
@@ -428,7 +428,7 @@
       </div>
       <div class="stat hi">
         <span class="v num">14,99€/año</span>
-        <span class="l">por hogar, no por persona — con solo sacar una foto al ticket, la nevera y la lista se actualizan solas sin teclear nada, y además sabéis quién debe qué y en qué tienda sale más barato cada producto. Primera semana gratis, sin tarjeta.</span>
+        <span class="l">por hogar, no por persona — con solo sacar una foto al ticket, la nevera se actualiza sola con lo comprado y queda registrado el gasto, sin teclear nada, y además sabéis quién debe qué y en qué tienda sale más barato cada producto. Primera semana gratis, sin tarjeta.</span>
       </div>
     </div>
     <p class="foot-note">Precio calcado del plan de hogar de AnyList Complete (14,99$/año) — mismo tipo de producto, misma decisión de cobrar por vivienda y no por persona. Repartido entre 3,5 convivientes de un piso medio, son menos de 0,40€ al mes por persona: una fracción mínima frente a los 200–400€/año que ya se pierden por mala planificación (sección "La lista de la compra").</p>
@@ -444,7 +444,7 @@
       <div class="rstep" data-n="1"><h3>Fridge</h3><p>Terminar la pantalla de la nevera con el modelo de 3 estados, sin cantidades.</p></div>
       <div class="rstep" data-n="2"><h3>Backend real</h3><p>Base de datos persistente (Postgres) sustituyendo el estado local del prototipo.</p></div>
       <div class="rstep" data-n="3"><h3>List</h3><p>Generación automática con control de concurrencia — dos personas marcando a la vez.</p></div>
-      <div class="rstep" data-n="4"><h3>History / Prices</h3><p>Lectura automática de tickets de compra y comparador de precios sobre el historial propio.</p></div>
+      <div class="rstep" data-n="4"><h3>Expenses</h3><p>Lectura automática de tickets de compra: rellena Fridge, registra el gasto y calcula quién debe qué y el comparador de precios sobre el historial propio.</p></div>
     </div>
   </section>
 
@@ -456,8 +456,7 @@
           <dl class="gloss">
             <dt>Fridge</dt><dd>Nevera compartida del hogar. 3 estados (bien / queda poco / se acabó), sin cantidades.</dd>
             <dt>List</dt><dd>Se genera sola a partir de los productos marcados "se acabó" en Fridge.</dd>
-            <dt>History</dt><dd>Historial de compras del hogar: quién compró qué y quién debe qué.</dd>
-            <dt>Prices</dt><dd>Comparador de precios por tienda, sobre el propio historial de compras.</dd>
+            <dt>Expenses</dt><dd>Historial de compras del hogar, con cantidad y precio de cada ticket: de ahí sale quién compró qué, quién debe qué, y en qué tienda sale más barato cada producto.</dd>
           </dl>
         </div>
         <div>

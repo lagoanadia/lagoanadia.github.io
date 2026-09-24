@@ -1,5 +1,11 @@
 [
   {
+    "title": "Synaptic",
+    "description": "A capture-first learning app: dump raw notes as text, images, or voice, and let AI organize them into structured, searchable pages. Full-text search, a RAG-based chat over your own notes, and spaced-repetition flashcards, built solo end-to-end as an installable PWA.",
+    "tags": ["Next.js", "TypeScript", "Postgres", "AI"],
+    "url": "https://synaptic-ruby.vercel.app"
+  },
+  {
     "title": "Larder",
     "description": "Product overview for a shared-fridge grocery app: the lista de la compra generates itself from what's actually in your fridge. Proyecto Transversal (2º DAM).",
     "tags": ["Product Design", "React", "TypeScript"],

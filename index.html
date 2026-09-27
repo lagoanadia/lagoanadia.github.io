@@ -1,240 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nadia Lagoa Vilela — Polyglot DAM student.">
-  <title>Nadia Lagoa Vilela</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nadia Lagoa Vilela — Polyglot DAM student.">
+<title>Nadia Lagoa Vilela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="#hero" class="nav-logo">NLV</a>
-    <ul class="nav-links">
-      <li><a href="#hero">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="java.html">Java</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
+
+<div class="mobile-topbar">
+  <a href="#hero" class="monogram">NLV</a>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">+</button>
+</div>
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">×</button>
+  <a href="#hero" data-nav="">About</a>
+  <a href="#work" data-nav="">Work</a>
+  <a href="java.html">Java</a>
+  <a href="#skills" data-nav="">Skills</a>
+  <a href="#experience" data-nav="">Experience</a>
+  <a href="#contact" data-nav="">Contact</a>
+</nav>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <span class="monogram">NLV</span>
+      <div>
+        <div class="sidebar-name">Nadia Lagoa Vilela</div>
+        <div class="sidebar-role">DAM student</div>
+      </div>
+    </div>
+    <ul class="sidebar-nav" style="list-style:none">
+      <li><a href="#hero" data-nav="">About <span class="go">→</span></a></li>
+      <li><a href="#work" data-nav="">Work <span class="go">→</span></a></li>
+      <li><a href="java.html">Java <span class="go">→</span></a></li>
+      <li><a href="#skills" data-nav="">Skills <span class="go">→</span></a></li>
+      <li><a href="#experience" data-nav="">Experience <span class="go">→</span></a></li>
+      <li><a href="#contact" data-nav="">Contact <span class="go">→</span></a></li>
     </ul>
-  </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-icons">
+        <a class="icon-btn email-trigger" href="mailto:lagoanadia@gmail.com" aria-label="Email Nadia" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"></path><path d="M3 6l9 7 9-7"></path></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/nadia-lagoa-vilela-a36a7b380/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><text x="7" y="16" font-size="9" fill="currentColor" stroke="none" font-family="sans-serif">in</text></svg>
+        </a>
+        <a class="icon-btn" href="https://github.com/lagoanadia" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4L4 12l4 8M16 4l4 8-4 8"></path></svg>
+        </a>
+      </div>
+      <a href="#contact" class="btn btn-white" style="width:100%;justify-content:center">Get in touch</a>
+    </div>
+  </aside>
 
-  <section id="hero" class="hero">
-    <div class="hero-left reveal">
-      <div class="hero-label reveal">
-        <p><button class="circle"></button> Available for opportunities</p>
-      </div>
-      <h1 class="hero-title reveal">
-        <p>NADIA</p><br>
-        <p><em>LAGOA</em></p><br>
-        <p>VILELA</p>
-      </h1>
-      <p class="hero-quote reveal">
-        I've been translating between worlds my whole life,<br>
-        <em>Code is just the newest one.</em>
-      </p>
-      <div class="hero-buttons">
-        <a href="#work">See my work</a>
-        <a href="#contact">Get in touch</a>
-      </div>
-      <div class="scroll-section">
-        <div class="scroll">↓ </div>
-        <div>scroll for more</div>
+  <div class="panel">
+    <div class="vtext"><span>© 2026 Nadia Lagoa Vilela</span></div>
+
+    <div class="topbar">
+      <p class="status-pill"><span class="live-dot"></span>Available for opportunities</p>
+      <div class="scroll-section" style="display:flex;align-items:center;gap:8px">
+        <span class="scroll-hint">↓ scroll for more</span>
       </div>
     </div>
 
-    <div class="hero-right">
-      <div class="code-window reveal">
-        <div class="top">
-          <div class="buttons">
-            <span class="redBtn"></span>
-            <span class="yellowBtn"></span>
-            <span class="greenBtn"></span>
+    <section id="hero" class="hero">
+      <div class="hero-canvas reveal">
+        <div class="hero-grid-v grid-line v"></div>
+        <div class="hero-grid-h grid-line h"></div>
+        <div class="center-dot"></div>
+
+        <div class="hero-cell hero-tl">
+          <ul class="corner-menu">
+            <li><a href="#hero">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="java.html">Java</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-cell hero-tr">
+          <p class="hero-quote">
+            I've been translating between worlds my whole life,<br>
+            <em>Code is just the newest one.</em>
+          </p>
+          <div class="hero-buttons">
+            <a href="#work" class="btn btn-primary">See my work <span class="arrow">↗</span></a>
+            <a href="#contact" class="btn btn-ghost">Get in touch <span class="arrow">↗</span></a>
           </div>
-          <span class="filename">nadia.js</span>
         </div>
-        <div class="code">
-          <span class="dark-green">// who I am</span><br>
-          <span class="red">function </span><span>nadia</span> <span class="yellow"> ( )</span><br>
-          <span class="yellow">let </span><span>humanLanguages</span><span class="yellow"> [ ]</span><span>=</span><br>
-          <span class="azul">'Spanish' 'German' 'English' </span><br>
-          <span class="azul">'Galician' 'French' </span><br>
-          <span class="yellow">let </span><span>machineLanguages</span><span class="yellow"> [ ]</span><span>=</span><br>
-          <span class="azul">'JavaScript' 'TypeScript' 'HTML&CSS' 'Java' 'SQL' </span><br>
-          <span class="azul">'React' 'Next.js' 'Node.js' </span><br>
-          <span class="yellow">currently</span><span class="azul"> 'DAM student'</span><br>
-          <span class="dark-green">// core belief</span><br>
-          <span class="red">function </span><span>translateWorld</span> <span class="yellow"> ( )</span><br>
-          <span class="red">return </span><span>world</span> <span class="yellow">understand adapt build</span><br>
-          <span class="dark-green">// always running</span><br>
-          <span class="yellow">translate</span><span> nadia</span><span class="yellow"> currentWorld</span>
+
+        <div class="hero-cell hero-bl" style="display:flex;align-items:flex-end">
+          <div class="code-window">
+            <div class="top">
+              <div class="buttons">
+                <span class="redBtn"></span>
+                <span class="yellowBtn"></span>
+                <span class="greenBtn"></span>
+              </div>
+              <span class="filename">nadia.js</span>
+            </div>
+            <div class="code">
+              <span class="dark-green">// who I am</span><br>
+              <span class="red">function </span><span>nadia</span> <span class="yellow"> ( )</span><br>
+              <span class="yellow">let </span><span>humanLanguages</span><span class="yellow"> [ ]</span><span>=</span><br>
+              <span class="azul">'Spanish' 'German' 'English' </span><br>
+              <span class="azul">'Galician' 'French' </span><br>
+              <span class="yellow">let </span><span>machineLanguages</span><span class="yellow"> [ ]</span><span>=</span><br>
+              <span class="azul">'JavaScript' 'TypeScript' 'HTML&amp;CSS' 'Java' 'SQL' </span><br>
+              <span class="azul">'React' 'Next.js' 'Node.js' </span><br>
+              <span class="yellow">currently</span><span class="azul"> 'DAM student'</span><br>
+              <span class="dark-green">// core belief</span><br>
+              <span class="red">function </span><span>translateWorld</span> <span class="yellow"> ( )</span><br>
+              <span class="red">return </span><span>world</span> <span class="yellow">understand adapt build</span><br>
+              <span class="dark-green">// always running</span><br>
+              <span class="yellow">translate</span><span> nadia</span><span class="yellow"> currentWorld</span><span class="code-cursor"></span>
+            </div>
+          </div>
         </div>
+
+        <div class="hero-cell"></div>
       </div>
-    </div>
-  </section>
 
-  <section class="work" id="work">
-    <div class="work-header reveal">
-      <div class="header-left reveal">
-        <p>Projects</p>
-        <a href="https://github.com/lagoanadia">VIEW ALL ON GITHUB ↗</a>
-      </div>
-      <p id="secondLine"></p>
-      <h1>
-        Things I've<br>
-        <em>built</em>
-      </h1>
-    </div>
-    <div class="work-body"></div>
-
-  </section>
-
-  <section class="skills-grid" id="skills">
-    <div class="skills-left reveal">
-      <div class="skills-title">
-        <p class="mini">Skills</p>
-        <h1>
-          <p>What I</p>
-          <p>bring to</p>
-          <p>the table</p>
+      <div class="hero-bottom">
+        <h1 class="hero-name" style="display:contents">
+          <span class="mask-line"><span>NADIA</span></span>
+          <em class="lagoa mask-line"><span>LAGOA</span></em>
+          <span class="mark mask-line"><span>VILELA</span></span>
         </h1>
       </div>
-    </div>
-    <div class="skills-right">
-      <div class="skills-sub reveal">
+    </section>
 
-        <div class="part reveal">
-          <p><em>LANGUAGES</em></p>
-          <div class="skill-row"><span>Java</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>HTML & CSS</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span></div></div>
-          <div class="skill-row"><span>JavaScript</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>SQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>TypeScript</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>React</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span></div></div>
+    <section class="work reveal" id="work">
+      <div class="work-header">
+        <div class="header-left reveal">
+          <p class="mono-label">Projects</p>
+          <a href="https://github.com/lagoanadia">VIEW ALL ON GITHUB ↗</a>
+        </div>
+        <p id="secondLine"></p>
+        <h1>
+          Things I've<br>
+          <em>built</em>
+        </h1>
+      </div>
+      <div class="work-carousel">
+        <div class="work-body"></div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="workPrev" type="button" aria-label="Previous project">←</button>
+          <button class="carousel-btn" id="workNext" type="button" aria-label="Next project">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-grid reveal" id="skills">
+      <div class="skills-left reveal">
+        <div class="skills-title">
+          <p class="mono-label">Skills</p>
+          <h1>
+            <p>What I</p>
+            <p>bring to</p>
+            <p>the table</p>
+          </h1>
+        </div>
+      </div>
+      <div class="skills-right">
+        <div class="skills-sub reveal">
+
+          <div class="part reveal">
+            <p><em>LANGUAGES</em></p>
+            <div class="skill-row"><span>Java</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>HTML &amp; CSS</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span></div></div>
+            <div class="skill-row"><span>JavaScript</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>SQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>TypeScript</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>React</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span></div></div>
+          </div>
+
+          <div class="part reveal">
+            <p><em>TOOLS</em></p>
+            <div class="skill-row"><span>Git &amp; GitHub</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>IntelliJ / VS Code</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>MySQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>Next.js</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>Node.js</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>PostgreSQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+          </div>
+
+          <div class="part reveal">
+            <p><em>HUMAN LANGUAGES</em></p>
+            <div class="skill-row"><span>Galician</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
+            <div class="skill-row"><span>Spanish</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
+            <div class="skill-row"><span>English</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
+            <div class="skill-row"><span>German</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span></div></div>
+            <div class="skill-row"><span>French</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span></div></div>
+          </div>
+
+          <div class="part reveal">
+            <p><em>SOFT SKILLS</em></p>
+            <div class="soft-skills-pills">
+              <span class="tag">Cross-cultural communication</span>
+              <span class="tag">Pressure performance</span>
+              <span class="tag">Fast pattern recognition</span>
+              <span class="tag">Self-directed learning</span>
+              <span class="tag">Adaptability</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="reveal">
+        <p class="exp-label">Experience</p>
+        <h2 class="exp-heading">How I<br>got here</h2>
+      </div>
+      <div class="exp-timeline reveal" style="transition-delay: 0.2s">
+        <div class="exp-item">
+          <span class="exp-index">(01)</span>
+          <div class="exp-date">2025 – Present</div>
+          <div>
+            <div class="exp-role">DAM Student</div>
+            <div class="exp-company">Desarrollo de Aplicaciones Multiplataforma · Spain</div>
+            <div class="exp-desc">First year of a Higher Vocational Training in cross-platform app development. Building foundations in Java, databases, interfaces, and systems. Finishing year one in a few months.</div>
+          </div>
+          <span class="exp-arrow">→</span>
+        </div>
+        <div class="exp-item">
+          <span class="exp-index">(02)</span>
+          <div class="exp-date">Switzerland · Years of service</div>
+          <div>
+            <div class="exp-role">Waitress</div>
+            <div class="exp-company">Hospitality · Spain</div>
+            <div class="exp-desc">Served in multilingual environments across Northern Spain. Learnt to read a room in seconds, switch between Spanish, German, French, and English mid-service, stay composed under real pressure, and deliver without excuses. The best UX training I never expected.</div>
+          </div>
+          <span class="exp-arrow">→</span>
+        </div>
+        <div class="exp-item">
+          <span class="exp-index">(03)</span>
+          <div class="exp-date">2012 – 2024</div>
+          <div>
+            <div class="exp-role">Life in Switzerland</div>
+            <div class="exp-company">Zürich · St Gallen · Swiss German culture</div>
+            <div class="exp-desc">12 years embedded in a culture that values precision, craft, and reliability above all else. Attended school in German and got my Matura specialized in Bio-Chemistry in 2024. Navigated Swiss bureaucracy, Swiss friendships, Swiss winters. Left with a different way of thinking about quality.</div>
+          </div>
+          <span class="exp-arrow">→</span>
+        </div>
+        <div class="exp-item">
+          <span class="exp-index">(04)</span>
+          <div class="exp-date">Ongoing</div>
+          <div>
+            <div class="exp-role">Self-directed learner</div>
+            <div class="exp-company">French, Italian, Swedish,</div>
+            <div class="exp-desc">Learnt French through Camus and Sartre — reading originals before translations. Italian through annual trips as a family interpreter. Currently learning Swedish independently. Every language a new operating system for the mind.</div>
+          </div>
+          <span class="exp-arrow">→</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-block reveal">
+        <div class="contact-grid-bg"></div>
+        <div class="contact-content">
+          <p class="contact-eyebrow">// Let's build something</p>
+          <h2 class="contact-heading">
+            Say <em>hello</em><br>in any language
+          </h2>
+          <p class="contact-sub">
+            I'm open to internships, collaborations,<br>
+            and interesting conversations.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:lagoanadia@gmail.com" class="contact-link primary btn btn-white email-trigger">
+              Send an email ↗
+            </a>
+            <a href="https://www.linkedin.com/in/nadia-lagoa-vilela-a36a7b380/" target="_blank" rel="noopener" class="contact-link ghost btn btn-outline-white">
+              LinkedIn ↗
+            </a>
+            <a href="https://github.com/lagoanadia" target="_blank" rel="noopener" class="contact-link ghost btn btn-outline-white">
+              GitHub ↗
+            </a>
+          </div>
         </div>
 
-        <div class="part reveal">
-          <p><em>TOOLS</em></p>
-          <div class="skill-row"><span>Git & GitHub</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>IntelliJ / VS Code</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>MySQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>Next.js</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>Node.js</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-          <div class="skill-row"><span>PostgreSQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+        <div class="lang-ticker">
+          <div class="lang-track">
+            <div class="lang-item">Galician <span>· Nativa ·</span></div>
+            <div class="lang-item">Español <span>· Fluente ·</span></div>
+            <div class="lang-item">English <span>· Fluent ·</span></div>
+            <div class="lang-item">Deutsch <span>· Fließend ·</span></div>
+            <div class="lang-item">Français <span>· Avancé ·</span></div>
+            <div class="lang-item">Italiano <span>· Principiante ·</span></div>
+            <div class="lang-item">Svenska <span>· Grundläggande ·</span></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="lang-item">Galician <span>· Nativa ·</span></div>
+            <div class="lang-item">Español <span>· Fluente ·</span></div>
+            <div class="lang-item">English <span>· Fluent ·</span></div>
+            <div class="lang-item">Deutsch <span>· Fließend ·</span></div>
+            <div class="lang-item">Français <span>· Avancé ·</span></div>
+            <div class="lang-item">Italiano <span>· Principiante ·</span></div>
+            <div class="lang-item">Svenska <span>· Grundläggande ·</span></div>
+          </div>
         </div>
-
-        <div class="part reveal">
-          <p><em>HUMAN LANGUAGES</em></p>
-          <div class="skill-row"><span>Galician</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
-          <div class="skill-row"><span>Spanish</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
-          <div class="skill-row"><span>English</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
-          <div class="skill-row"><span>German</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span></div></div>
-          <div class="skill-row"><span>French</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span></div></div>
-
-        </div>
-
-        <div class="part reveal">
-          <p><em>SOFT SKILLS</em></p>
-          <div class="skill-row"><span>Cross-cultural communication</span></div>
-          <div class="skill-row"><span>Pressure performance</span></div>
-          <div class="skill-row"><span>Fast pattern recognition</span></div>
-          <div class="skill-row"><span>Self-directed learning</span></div>
-          <div class="skill-row"><span>Adaptability</span></div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="experience">
-    <div class="reveal">
-      <p class="exp-label">Experience</p>
-      <h2 class="exp-heading">How I<br>got here</h2>
-    </div>
-    <div class="exp-timeline reveal" style="transition-delay: 0.2s">
-      <div class="exp-item">
-        <div class="exp-date">2025 – Present</div>
-        <div class="exp-role">DAM Student</div>
-        <div class="exp-company">Desarrollo de Aplicaciones Multiplataforma · Spain</div>
-        <div class="exp-desc">First year of a Higher Vocational Training in cross-platform app development. Building foundations in Java, databases, interfaces, and systems. Finishing year one in a few months.</div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-date">Switzerland · Years of service</div>
-        <div class="exp-role">Waitress</div>
-        <div class="exp-company">Hospitality · Spain</div>
-        <div class="exp-desc">Served in multilingual environments across Northern Spain. Learnt to read a room in seconds, switch between Spanish, German, French, and English mid-service, stay composed under real pressure, and deliver without excuses. The best UX training I never expected.</div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-date">2012 – 2024</div>
-        <div class="exp-role">Life in Switzerland</div>
-        <div class="exp-company">Zürich · St Gallen · Swiss German culture</div>
-        <div class="exp-desc">12 years embedded in a culture that values precision, craft, and reliability above all else. Attended school in German and got my Matura specialized in Bio-Chemistry in 2024. Navigated Swiss bureaucracy, Swiss friendships, Swiss winters. Left with a different way of thinking about quality.</div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-date">Ongoing</div>
-        <div class="exp-role">Self-directed learner</div>
-        <div class="exp-company">French, Italian, Swedish,</div>
-        <div class="exp-desc">Learnt French through Camus and Sartre — reading originals before translations. Italian through annual trips as a family interpreter. Currently learning Swedish independently. Every language a new operating system for the mind.</div>
-      </div>
-    </div>
-  </section>
+    <footer>
+      <span class="footer-copy">© 2026 Nadia Lagoa Vilela</span>
+      <span class="footer-sig">Crafted with intent.</span>
+    </footer>
+  </div>
+</div>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-grid-bg"></div>
-  <div class="contact-content reveal">
-    <p class="contact-eyebrow">// Let's build something</p>
-    <h2 class="contact-heading">
-      Say <em>hello</em><br>in any language
-    </h2>
-    <p class="contact-sub">
-      I'm open to internships, collaborations,<br>
-      and interesting conversations.
-    </p>
-    <div class="contact-links">
-      <a href="mailto:lagoanadia@gmail.com" class="contact-link primary">
-        Send an email ↗
-      </a>
-      <a href="https://www.linkedin.com/in/nadia-lagoa-vilela-a36a7b380/" target="_blank" class="contact-link ghost">
-        LinkedIn ↗
-      </a>
-      <a href="https://github.com/lagoanadia" target="_blank" class="contact-link ghost">
-        GitHub ↗
-      </a>
+<div class="email-backdrop" id="emailBackdrop" role="dialog" aria-modal="true" aria-labelledby="emailPanelTitle">
+  <div class="email-panel">
+    <button class="email-close" id="emailClose" aria-label="Close">×</button>
+    <h3 id="emailPanelTitle">Send an email</h3>
+    <p class="sub">lagoanadia@gmail.com</p>
+    <div class="email-options">
+      <a class="email-option" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=lagoanadia@gmail.com" target="_blank" rel="noopener">Open in Gmail ↗</a>
+      <a class="email-option" href="mailto:lagoanadia@gmail.com">Use my mail app</a>
+      <button class="email-option" id="copyEmailBtn" type="button">
+        <span>Copy email</span>
+        <span class="copied">Copied!</span>
+      </button>
     </div>
   </div>
- 
-  <div class="lang-ticker">
-    <div class="lang-track">
-      <div class="lang-item">Galician <span>· Nativa ·</span></div>
-      <div class="lang-item">Español <span>· Fluente ·</span></div>
-      <div class="lang-item">English <span>· Fluent ·</span></div>
-      <div class="lang-item">Deutsch <span>· Fließend ·</span></div>
-      <div class="lang-item">Français <span>· Avancé ·</span></div>
-      <div class="lang-item">Italiano <span>· Principiante ·</span></div>
-      <div class="lang-item">Svenska <span>· Grundläggande ·</span></div>
-      <!-- Duplicate for seamless loop -->
-      <div class="lang-item">Galician <span>· Nativa ·</span></div>
-      <div class="lang-item">Español <span>· Fluente ·</span></div>
-      <div class="lang-item">English <span>· Fluent ·</span></div>
-      <div class="lang-item">Deutsch <span>· Fließend ·</span></div>
-      <div class="lang-item">Français <span>· Avancé ·</span></div>
-      <div class="lang-item">Italiano <span>· Principiante ·</span></div>
-      <div class="lang-item">Svenska <span>· Grundläggande ·</span></div>
-    </div>
-  </div>
-</section>
- 
-<footer>
-  <span class="footer-copy">© 2026 Nadia Lagoa Vilela</span>
-  <span class="footer-sig">Crafted with intent.</span>
-</footer>
- 
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -6,242 +6,83 @@
   <title>Java Works — NLV</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .java-hero {
-      padding: 10rem 3rem 4rem;
-      background-color: var(--color-sections);
-      color: var(--color-bg);
-    }
-
-    .java-hero p.mini {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-
-    .java-hero h1 {
-      font-family: var(--font-serif);
-      font-size: 3.5rem;
-      line-height: 1.1;
-    }
-
-    .java-hero h1 em {
-      color: var(--color-accent);
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 2rem;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--color-accent);
-      padding-bottom: 2px;
-      transition: color 0.3s;
-    }
-
-    .back-link:hover { color: var(--color-bg); }
-
-    /* selector buttons */
-    .java-selector {
-      display: flex;
-      gap: 1rem;
-      padding: 3rem 3rem 0;
-      background-color: var(--color-bg);
-    }
-
-    .selector-btn {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: none;
-      border: 1px solid var(--color-darker);
-      color: var(--text-muted);
-      padding: 0.6rem 1.2rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .selector-btn:hover {
-      border-color: var(--color-accent);
-      color: var(--text-dark);
-    }
-
-    .selector-btn.active {
-      background-color: var(--color-sections);
-      border-color: var(--color-sections);
-      color: var(--color-bg);
-    }
-
-    /* project viewer */
-    .project-viewer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      padding: 4rem 3rem;
-      background-color: var(--color-bg);
-      min-height: 70vh;
-      align-items: start;
-    }
-
-    /* slideshow */
-    .slideshow {
-      position: relative;
-    }
-
-    .slide {
-      display: none;
-    }
-
-    .slide.active {
-      display: block;
-    }
-
-    .slide img {
-      width: 100%;
-      border-radius: 4px;
-      display: block;
-      background-color: var(--color-darker);
-      min-height: 280px;
-      object-fit: cover;
-    }
-
-    .slide-controls {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .slide-btn {
-      background: none;
-      border: 1px solid var(--color-darker);
-      color: var(--text-muted);
-      padding: 0.4rem 0.8rem;
-      cursor: pointer;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      transition: all 0.3s;
-    }
-
-    .slide-btn:hover {
-      border-color: var(--color-accent);
-      color: var(--text-dark);
-    }
-
-    .slide-counter {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-    }
-
-    /* project info */
-    .project-detail {
-      padding-top: 1rem;
-    }
-
-    .project-detail .exp-date {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .project-detail h2 {
-      font-family: var(--font-serif);
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
-
-    .project-detail h2 em {
-      color: var(--color-accent);
-    }
-
-    .project-detail p {
-      font-size: 14px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .project-detail .project-tags {
-      display: flex;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-
-    .project-detail .tag {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      border: 1px solid var(--color-darker);
-      padding: 3px 10px;
-    }
-
-    .github-link {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--text-muted);
-      border-bottom: 1px solid var(--color-accent);
-      padding-bottom: 2px;
-      transition: color 0.3s;
-    }
-
-    .github-link:hover { color: var(--text-dark); }
-
-    @media (max-width: 768px) {
-      .java-hero { padding: 8rem 1.5rem 3rem; }
-      .java-selector { padding: 2rem 1.5rem 0; flex-wrap: wrap; }
-      .project-viewer { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
-    }
-  </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">NLV</a>
-    <ul class="nav-links">
-      <li><a href="index.html#hero">About</a></li>
-      <li><a href="index.html#work">Work</a></li>
-      <li><a href="index.html#skills">Skills</a></li>
-      <li><a href="index.html#experience">Experience</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+<div class="mobile-topbar">
+  <a href="index.html" class="monogram">NLV</a>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">+</button>
+</div>
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">×</button>
+  <a href="index.html#hero">About</a>
+  <a href="index.html#work">Work</a>
+  <a href="index.html#skills">Skills</a>
+  <a href="index.html#experience">Experience</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <a href="index.html" class="monogram">NLV</a>
+      <div>
+        <div class="sidebar-name">Nadia Lagoa Vilela</div>
+        <div class="sidebar-role">DAM student</div>
+      </div>
+    </div>
+    <ul class="sidebar-nav" style="list-style:none">
+      <li><a href="index.html#hero">About <span class="go">→</span></a></li>
+      <li><a href="index.html#work">Work <span class="go">→</span></a></li>
+      <li><a href="index.html#skills">Skills <span class="go">→</span></a></li>
+      <li><a href="index.html#experience">Experience <span class="go">→</span></a></li>
+      <li><a href="index.html#contact">Contact <span class="go">→</span></a></li>
     </ul>
-  </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-icons">
+        <a class="icon-btn" href="mailto:lagoanadia@gmail.com" aria-label="Email Nadia" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"></path><path d="M3 6l9 7 9-7"></path></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/nadia-lagoa-vilela-a36a7b380/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><text x="7" y="16" font-size="9" fill="currentColor" stroke="none" font-family="sans-serif">in</text></svg>
+        </a>
+        <a class="icon-btn" href="https://github.com/lagoanadia" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4L4 12l4 8M16 4l4 8-4 8"></path></svg>
+        </a>
+      </div>
+      <a href="index.html#contact" class="btn btn-white" style="width:100%;justify-content:center">Get in touch</a>
+    </div>
+  </aside>
 
-  <div class="java-hero reveal">
-    <p class="mini">Java Projects</p>
-    <h1>Built in<br><em>Java</em></h1>
-    <a href="index.html#work" class="back-link">← Back to all work</a>
+  <div class="panel">
+    <div class="vtext"><span>© 2026 Nadia Lagoa Vilela</span></div>
+
+    <div class="topbar">
+      <p class="status-pill"><span class="live-dot"></span>Available for opportunities</p>
+    </div>
+
+    <div class="java-hero reveal">
+      <p class="mono-label">Java Projects</p>
+      <h1>Built in<br><em>Java</em></h1>
+      <a href="index.html#work" class="back-link">← Back to all work</a>
+    </div>
+
+    <div class="java-selector" id="selector"></div>
+
+    <div class="project-viewer" id="viewer">
+      <div class="slideshow" id="slideshow"></div>
+      <div class="project-detail" id="detail"></div>
+    </div>
+
+    <footer>
+      <span class="footer-copy">© 2026 Nadia Lagoa Vilela</span>
+      <span class="footer-sig">Crafted with intent.</span>
+    </footer>
   </div>
+</div>
 
-  <div class="java-selector" id="selector"></div>
-
-  <div class="project-viewer" id="viewer">
-    <div class="slideshow" id="slideshow"></div>
-    <div class="project-detail" id="detail"></div>
-  </div>
-
-  <script src="java.js"></script>
+<script src="java.js"></script>
 </body>
 </html>

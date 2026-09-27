@@ -94,3 +94,21 @@ projects.forEach(function(p, i) {
 
 // render first project on load
 renderProject(0)
+// mobile menu (same behaviour as the main page)
+const mobileMenu = document.getElementById('mobileMenu')
+const mobileMenuBtn = document.getElementById('mobileMenuBtn')
+const mobileMenuClose = document.getElementById('mobileMenuClose')
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open')
+  mobileMenuBtn.setAttribute('aria-expanded', 'true')
+  document.body.style.overflow = 'hidden'
+}
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open')
+  mobileMenuBtn.setAttribute('aria-expanded', 'false')
+  document.body.style.overflow = ''
+}
+mobileMenuBtn.addEventListener('click', openMobileMenu)
+mobileMenuClose.addEventListener('click', closeMobileMenu)
+mobileMenu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMobileMenu) })

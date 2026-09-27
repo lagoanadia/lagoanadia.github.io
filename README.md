@@ -75,9 +75,9 @@ Three deliberate font choices loaded from Google Fonts:
 
 | Font | Use |
 |---|---|
-| Cormorant Garamond | Headings — editorial, high contrast, slightly literary |
-| DM Mono | Labels, tags, dates, code — technical and understated |
-| Outfit | Body text — clean and readable |
+| Inter Tight | Headings and body — tight, confident grotesk |
+| Instrument Serif | Italic emphasis words (*LAGOA*, *built*, *hello*) |
+| JetBrains Mono | Labels, tags, dates, code — technical and understated |
 
 ### Responsive design
 
@@ -104,7 +104,7 @@ The layout uses CSS Grid throughout. On mobile (≤768px): the nav collapses, th
 - HTML, CSS, JavaScript — zero dependencies, zero build step
 - Intersection Observer API
 - Fetch API
-- Google Fonts (Cormorant Garamond, DM Mono, Outfit)
+- Google Fonts (Inter Tight, Instrument Serif, JetBrains Mono)
 - GitHub Pages
 
 ---

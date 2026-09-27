@@ -79,16 +79,16 @@ mobileMenu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click
 // PROJECTS — fetched from projects.json, rendered into .work-body
 // ============================================
 const cardBackgrounds = [
-  { bg: 'var(--card-orange)' },
-  { bg: 'var(--card-red)' },
-  { bg: 'var(--card-blue)' },
-  { bg: 'var(--card-yellow)', light: true },
-  { bg: 'var(--card-blush)', light: true },
-  { bg: 'var(--card-green)' },
-  { bg: 'linear-gradient(155deg, var(--card-orange), var(--card-red))' },
-  { bg: 'linear-gradient(155deg, var(--card-blue), var(--card-blush))' },
-  { bg: 'linear-gradient(155deg, var(--card-red), var(--card-orange))' },
-  { bg: 'linear-gradient(155deg, var(--card-green), var(--card-blue))' }
+  'var(--card-orange)',
+  'var(--card-red)',
+  'var(--card-blue)',
+  'var(--card-yellow)',
+  'var(--card-blush)',
+  'var(--card-green)',
+  'linear-gradient(155deg, var(--card-orange), var(--card-red))',
+  'linear-gradient(155deg, var(--card-blue), var(--card-blush))',
+  'linear-gradient(155deg, var(--card-red), var(--card-orange))',
+  'linear-gradient(155deg, var(--card-green), var(--card-blue))'
 ]
 
 fetch('projects.json')
@@ -98,19 +98,15 @@ fetch('projects.json')
     data.forEach(function(project, index) {
       const div = document.createElement('div')
       div.classList.add('works')
+      div.style.background = cardBackgrounds[index % cardBackgrounds.length]
 
       const num = String(index + 1).padStart(2, '0')
       const tagsHTML = project.tags.map(function(tag) {
         return `<span class="tag">${tag}</span>`
       }).join('')
 
-      // the colour lives in the arch block; light colours get dark text
-      const look = cardBackgrounds[index % cardBackgrounds.length]
-
       div.innerHTML = `
-        <div class="project-visual${look.light ? ' light' : ''}" style="background: ${look.bg}">
-          <span class="project-num">${num}</span>
-        </div>
+        <span class="project-num">${num}</span>
         <div class="project-info">
           <a href="${project.url}" target="_blank" class="project-title">${project.title}</a>
           <p class="project-desc">${project.description}</p>
@@ -151,42 +147,6 @@ function initCarouselCenter() {
   })
   window.addEventListener('resize', updateCenter)
   updateCenter()
-
-  // prev / next buttons: move one card at a time
-  const prevBtn = document.getElementById('workPrev')
-  const nextBtn = document.getElementById('workNext')
-  function step() {
-    return cards[0].getBoundingClientRect().width + 16
-  }
-  function updateButtons() {
-    prevBtn.disabled = track.scrollLeft <= 2
-    nextBtn.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2
-  }
-  prevBtn.addEventListener('click', function() { track.scrollBy({ left: -step(), behavior: 'smooth' }) })
-  nextBtn.addEventListener('click', function() { track.scrollBy({ left: step(), behavior: 'smooth' }) })
-  track.addEventListener('scroll', updateButtons)
-  updateButtons()
-
-  // drag to scroll with the mouse
-  let dragging = false
-  let startX = 0
-  let startScroll = 0
-  track.addEventListener('mousedown', function(e) {
-    dragging = true
-    startX = e.pageX
-    startScroll = track.scrollLeft
-    track.style.scrollSnapType = 'none'
-  })
-  window.addEventListener('mousemove', function(e) {
-    if (!dragging) return
-    e.preventDefault()
-    track.scrollLeft = startScroll - (e.pageX - startX)
-  })
-  window.addEventListener('mouseup', function() {
-    if (!dragging) return
-    dragging = false
-    track.style.scrollSnapType = ''
-  })
 }
 
 // ============================================
@@ -246,4 +206,3 @@ function fallbackCopy(text) {
   try { document.execCommand('copy') } catch (e) {}
   document.body.removeChild(ta)
 }
-

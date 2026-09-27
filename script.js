@@ -114,9 +114,39 @@ fetch('projects.json')
         </div>
       `
       workBody.appendChild(div)
+      initCardHover(div)
     })
     initCarouselCenter()
   })
+
+// hover: tilt the card toward the mouse and move the light with it
+function initCardHover(card) {
+  const link = card.querySelector('.project-title')
+
+  card.addEventListener('mousemove', function(e) {
+    if (reduceMotion) return
+    const rect = card.getBoundingClientRect()
+    // position of the mouse inside the card, from 0 to 1
+    const x = (e.clientX - rect.left) / rect.width
+    const y = (e.clientY - rect.top) / rect.height
+    card.style.setProperty('--mx', (x * 100) + '%')
+    card.style.setProperty('--my', (y * 100) + '%')
+    // max 8 degrees of tilt; centre of the card = no tilt
+    card.style.setProperty('--ry', ((x - 0.5) * 8) + 'deg')
+    card.style.setProperty('--rx', ((0.5 - y) * 8) + 'deg')
+  })
+
+  card.addEventListener('mouseleave', function() {
+    card.style.setProperty('--rx', '0deg')
+    card.style.setProperty('--ry', '0deg')
+  })
+
+  // the whole card opens the project, not only the title
+  card.addEventListener('click', function(e) {
+    if (e.target.closest('a')) return
+    window.open(link.href, '_blank', 'noopener')
+  })
+}
 
 // centre-card scaling for the work carousel
 function initCarouselCenter() {

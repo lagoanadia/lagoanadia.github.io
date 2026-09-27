@@ -28,6 +28,18 @@ a{color:inherit}
 .sketch{position:relative}
 .sketch::after{content:"";position:absolute;inset:0;border:2.5px solid var(--ink);border-radius:10px 22px 12px 18px / 18px 10px 22px 12px;filter:url(#wob);pointer-events:none}
 
+.cast{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(4px,2vw,24px);padding-block:28px 8px;align-items:end}
+.cast figure{margin:0;display:grid;gap:6px;justify-items:center}
+.cast svg{width:100%;max-width:150px;height:auto;overflow:visible}
+.cast figcaption{font-family:var(--hand);color:var(--pen);font-size:clamp(14px,2.2vw,20px);line-height:1}
+.doodle *{stroke:var(--ink);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.doodle .f{fill:var(--sheet)}
+.doodle .n{fill:none}
+.doodle .k{fill:var(--ink);stroke:none}
+.doodle .y{fill:var(--marker)}
+.doodle .w{fill:#fff}
+.doodle g.body{filter:url(#wob)}
+
 nav.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;padding-block:18px;border-bottom:2.5px solid var(--ink)}
 .logo{font-stretch:62%;font-weight:800;font-size:26px;letter-spacing:-.01em;text-decoration:none}
 nav.top ul{display:flex;flex-wrap:wrap;gap:6px 24px;margin:0;padding:0;list-style:none}
@@ -135,6 +147,59 @@ footer .hand{font-size:22px}
 </nav>
 
 <header id="top">
+  <div class="cast" aria-hidden="true">
+    <figure>
+      <svg class="doodle" viewBox="0 0 140 160">
+        <g class="body">
+          <path class="f" d="M34 8h72v122l-9-8-9 8-9-8-9 8-9-8-9 8-9-8-9 8-9-8z"/>
+          <path class="n" d="M48 34h44M48 48h44M48 62h30"/>
+        </g>
+        <g class="eye"><ellipse class="w" cx="56" cy="90" rx="10" ry="12"/><circle class="k pupil" cx="56" cy="90" r="5"/></g>
+        <g class="eye"><ellipse class="w" cx="84" cy="90" rx="10" ry="12"/><circle class="k pupil" cx="84" cy="90" r="5"/></g>
+      </svg>
+      <figcaption>ticket</figcaption>
+    </figure>
+    <figure>
+      <svg class="doodle" viewBox="0 0 140 160">
+        <g class="body">
+          <path class="f" d="M26 14h88v128H26z"/>
+          <path class="n" d="M70 14v128"/>
+          <circle class="n" cx="62" cy="90" r="3"/>
+          <circle class="n" cx="78" cy="90" r="3"/>
+          <path class="n" d="M26 108h88"/>
+        </g>
+        <g class="eye"><ellipse class="w" cx="50" cy="60" rx="10" ry="12"/><circle class="k pupil" cx="50" cy="60" r="5"/></g>
+        <g class="eye"><ellipse class="w" cx="90" cy="60" rx="10" ry="12"/><circle class="k pupil" cx="90" cy="60" r="5"/></g>
+      </svg>
+      <figcaption>larder</figcaption>
+    </figure>
+    <figure>
+      <svg class="doodle" viewBox="0 0 140 160">
+        <g class="body">
+          <path class="f" d="M30 20h80v120H30z"/>
+          <rect class="f" x="55" y="8" width="30" height="16" rx="6"/>
+          <path class="n" d="M44 100l8 8 14-16M44 76l8 8 14-16"/>
+          <path class="n" d="M74 84h30M74 108h30"/>
+        </g>
+        <g class="eye"><ellipse class="w" cx="55" cy="46" rx="10" ry="12"/><circle class="k pupil" cx="55" cy="46" r="5"/></g>
+        <g class="eye"><ellipse class="w" cx="85" cy="46" rx="10" ry="12"/><circle class="k pupil" cx="85" cy="46" r="5"/></g>
+      </svg>
+      <figcaption>list</figcaption>
+    </figure>
+    <figure>
+      <svg class="doodle" viewBox="0 0 140 160">
+        <g class="body">
+          <path class="y" d="M20 60 62 18h58v58l-42 42q-6 6-12 0L20 72q-6-6 0-12z"/>
+          <circle class="f" cx="90" cy="46" r="9"/>
+          <path class="n" d="M60 96q10 10 20 0"/>
+        </g>
+        <g class="eye"><ellipse class="w" cx="58" cy="66" rx="10" ry="12"/><circle class="k pupil" cx="58" cy="66" r="5"/></g>
+        <g class="eye"><ellipse class="w" cx="86" cy="66" rx="10" ry="12"/><circle class="k pupil" cx="86" cy="66" r="5"/></g>
+      </svg>
+      <figcaption>track</figcaption>
+    </figure>
+  </div>
+
   <div class="taglines">
     <span class="caps">Estado del arte<br>y estudio de mercado</span>
     <span class="caps">Freemium<br>14,99€/año</span>
@@ -213,7 +278,7 @@ footer .hand{font-size:22px}
       </table>
     </div>
   </div>
-  <blockquote class="quote">El sistema original sigue sin digitalizarse. Hace falta una app tan rápida como Notas y tan colaborativa como Bring!, que además resuelva frustraciones reales como la comida que caduca o saber qué queda en casa, sin llenar la pantalla de funciones que nadie usa.</blockquote>
+  <blockquote class="quote" style="max-width:none">El sistema original sigue sin digitalizarse. Hace falta una app tan rápida como Notas y tan colaborativa como Bring!, que además resuelva frustraciones reales como la comida que caduca o saber qué queda en casa, sin llenar la pantalla de funciones que nadie usa.</blockquote>
 
   <div class="board">
     <div class="note" style="--r:-1deg">
@@ -409,4 +474,27 @@ footer .hand{font-size:22px}
 </footer>
 
 </div>
+
+<script>
+// Los personajes siguen al puntero con la mirada.
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var eyes = Array.prototype.slice.call(document.querySelectorAll('.cast .eye'));
+  var raf = 0, px = 0, py = 0;
+  function update(){
+    raf = 0;
+    eyes.forEach(function(eye){
+      var r = eye.getBoundingClientRect();
+      var dx = px - (r.left + r.width/2), dy = py - (r.top + r.height/2);
+      var d = Math.hypot(dx, dy) || 1, k = Math.min(1, d/120);
+      eye.querySelector('.pupil').setAttribute('transform', 'translate(' + (dx/d*4*k).toFixed(2) + ' ' + (dy/d*5*k).toFixed(2) + ')');
+    });
+  }
+  window.addEventListener('pointermove', function(e){
+    px = e.clientX; py = e.clientY;
+    if (!raf) raf = requestAnimationFrame(update);
+  }, {passive:true});
+})();
+</script>
+
 </body></html>

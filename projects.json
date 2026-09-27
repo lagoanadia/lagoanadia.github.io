@@ -12,7 +12,7 @@
     "url": "larder/index.html"
   },
   {
-    "title": "Kooky",
+    "title": "Kook",
     "description": "A recipe finder that turns loose fridge ingredients into real recipes, with AI-generated cooking tips.",
     "tags": ["React", "Node.js", "AI"],
     "url": "https://kook-psi.vercel.app"

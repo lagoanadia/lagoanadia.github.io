@@ -77,32 +77,32 @@ def bullets(items):
 left = []
 left += section("PERFIL", first=True)
 left.append(Paragraph(
-    "Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) apasionada por "
-    "entender de verdad lo que construyo, no solo hacerlo funcionar. Desarrollo "
-    "proyectos propios en Java, JavaScript, TypeScript, Python y SQL: aplicaciones web "
-    "con React, Next.js y Node.js, apps de escritorio con JDBC, SQLite y CustomTkinter, "
-    "y análisis de datos con pandas y matplotlib. Autodidacta, orientada a los "
-    "fundamentos antes de los frameworks. Perfil multilingüe (español, gallego, inglés "
-    "C1 y alemán C1) con experiencia en entornos de alta demanda.", body))
+    "Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM), disponible para "
+    "oportunidades. Llevo toda la vida traduciendo entre mundos; el código es el más "
+    "nuevo. Criada en Suiza y multilingüe (gallego, español, inglés, alemán, francés), "
+    "combino comunicación intercultural con desarrollo en Java, JavaScript, TypeScript, "
+    "Python y SQL, y proyectos propios con React, Next.js y Node.js. Autodidacta y "
+    "orientada a los fundamentos: me importa entender de verdad lo que construyo, no "
+    "solo hacerlo funcionar.", body))
 
 left += section("HABILIDADES TÉCNICAS")
 left.append(rows([
-    ("Lenguajes", "Java | JavaScript | TypeScript | Python | HTML5/CSS3 | SQL"),
+    ("Lenguajes", "Java | JavaScript | TypeScript | HTML y CSS | Python | SQL"),
     ("Java", "POO, Swing, JDBC, JavaFX, Maven"),
     ("JavaScript", "DOM, Fetch API, async/await"),
-    ("Web", "React, Next.js, Node.js, PWA"),
+    ("Frameworks", "React, Next.js, Node.js"),
     ("Python", "pandas, matplotlib, CustomTkinter, Ollama"),
-    ("Datos", "SQL, PostgreSQL, SQLite, MS Access, CRUD"),
+    ("Bases datos", "SQL, MySQL, PostgreSQL"),
     ("IA aplicada", "RAG, integración de APIs de IA"),
-    ("Herramientas", "Git, GitHub, Jupyter, MS Office avanzado"),
-    ("Portfolio", "lagoanadia.github.io"),
+    ("Herramientas", "Git, GitHub, IntelliJ IDEA, VS Code"),
+    ("Portfolio", "nadia-lagoa.vercel.app"),
 ], LEFT_W, first=62))
 
 left += section("IDIOMAS")
 left.append(rows([
     ("Español", "Nativo"), ("Gallego", "Nativo"),
     ("Inglés", "Fluido — C1"), ("Alemán", "Fluido — C1"),
-    ("Francés", "B2"), ("Portugués", "A2-B1"), ("Italiano", "A2"),
+    ("Francés", "B2"), ("Italiano", "A2"), ("Sueco", "Básico"),
 ], LEFT_W, first=62))
 
 left += section("EDUCACIÓN")
@@ -119,8 +119,8 @@ left += [
 
 left += section("HABILIDADES PERSONALES")
 left.append(Paragraph(
-    "Aprendizaje autónomo | Resolución de problemas | Adaptabilidad | Atención al "
-    "detalle | Comunicación intercultural | Trabajo en equipo", body))
+    "Comunicación intercultural | Rendimiento bajo presión | Reconocimiento rápido de "
+    "patrones | Aprendizaje autónomo | Adaptabilidad", body))
 
 right = []
 right += section("EXPERIENCIA LABORAL", first=True)
@@ -196,7 +196,7 @@ def draw_header(c, doc):
     c.drawString(M + 72, H - 88,
                  "+34 613 597 453 | lagoanadia@gmail.com | A Coruña, España")
     c.drawString(M + 72, H - 100,
-                 "lagoanadia.github.io | github.com/lagoanadia")
+                 "nadia-lagoa.vercel.app | github.com/lagoanadia | linkedin.com/in/nadia-lagoa-vilela-a36a7b380")
     c.setStrokeColor(TEAL); c.setLineWidth(1)
     c.line(M, H - 112, W - M, H - 112)
     # separador vertical entre columnas

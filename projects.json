@@ -1,5 +1,11 @@
 [
   {
+    "title": "Cadence",
+    "description": "A calm, mobile-first personal growth app for people with many interests: agenda, routines, home chores, reading, movement and quick expenses in one place. An AI assistant turns what you say or type into tasks and expenses you confirm. Installable PWA.",
+    "tags": ["Next.js", "TypeScript", "Prisma", "AI"],
+    "url": "https://cadence-amber-iota.vercel.app"
+  },
+  {
     "title": "Synaptic",
     "description": "A capture-first learning app: dump raw notes as text, images, or voice, and let AI organize them into structured, searchable pages. Full-text search, a RAG-based chat over your own notes, and spaced-repetition flashcards, built solo end-to-end as an installable PWA.",
     "tags": ["Next.js", "TypeScript", "Postgres", "AI"],

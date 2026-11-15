@@ -1,18 +1,19 @@
 [
   {
     "title": "Synaptic",
-    "description": "A capture-first learning app: dump raw notes as text, images or voice, and AI organizes them into structured pages with highlighted key concepts, an interactive concept map per topic and short daily review sessions focused on what you haven't mastered yet. Google Classroom and Calendar integrations, multilingual, installable PWA, built solo end-to-end.",
+    "description": "I had a thousand loose notes and none in their place, so I built the app I wanted: dump raw text, photos or voice notes and AI turns them into structured pages, a concept map per topic and short daily reviews of what you haven't mastered yet. Built solo end-to-end, it now has real users and is starting to earn subscription revenue.",
     "tags": [
       "Next.js",
       "TypeScript",
-      "Postgres",
+      "PostgreSQL",
+      "Prisma",
       "AI"
     ],
     "url": "https://synapticnotes.app"
   },
   {
     "title": "Cadence",
-    "description": "A calm, mobile-first personal growth app for people with many interests: agenda, routines, home chores, reading, movement and quick expenses in one place. An AI assistant turns what you say or type into tasks and expenses you confirm. Installable PWA.",
+    "description": "For people with too many interests to fit in one app: agenda, routines, home chores, reading, movement and quick expenses in one calm, mobile-first PWA. An AI assistant turns what you say or type into tasks and expenses you confirm. Auth.js sign-in, Zod validation and Vitest tests.",
     "tags": [
       "Next.js",
       "TypeScript",
@@ -22,18 +23,8 @@
     "url": "https://cadence-organized-life.vercel.app"
   },
   {
-    "title": "GridCast",
-    "description": "Upload once, publish everywhere: schedule your social media posts from a single place. Google sign-in, and every user only ever sees their own content.",
-    "tags": [
-      "Next.js",
-      "TypeScript",
-      "OAuth"
-    ],
-    "url": "https://gridcast-schedule.vercel.app"
-  },
-  {
     "title": "Lagoa · Estudio digital",
-    "description": "My freelance studio site: websites with bookings, WhatsApp assistants, online shops and Google Maps presence for local businesses, each with a live demo you can try before hiring.",
+    "description": "My freelance studio. Small businesses don't buy 'a website', they buy bookings, answered messages and customers who find them. So every service — bookings, WhatsApp assistant, online shop, Google Maps — comes with a live demo you can try before hiring.",
     "tags": [
       "HTML",
       "CSS",
@@ -43,7 +34,7 @@
   },
   {
     "title": "Yutori Espacio Creativo",
-    "description": "Website for a creative workshop space in A Coruña: watercolour, crochet, sewing and embroidery classes, monthly workshops, private sessions and gift vouchers, with its own admin panel.",
+    "description": "Client project for a creative workshop space in A Coruña: watercolour, crochet, sewing and embroidery classes, monthly workshops, private sessions and gift vouchers, plus an admin panel so the owner updates everything herself. Built with Astro and deployed on Cloudflare Workers.",
     "tags": [
       "Astro",
       "Cloudflare Workers"
@@ -52,31 +43,11 @@
   },
   {
     "title": "Iago · Asesor fiscal",
-    "description": "Website for an online tax advisor: tax returns, self-employed paperwork, inheritances and grants, explained without jargon. Bilingual (ES/CA) with playful draggable stickers.",
+    "description": "Client project for an online tax advisor whose pitch is 'no jargon, no rush': tax returns, self-employed paperwork, inheritances, grants and bank offers explained in plain words. Bilingual (ES/CA), with playful draggable stickers to keep a dry topic friendly.",
     "tags": [
       "Web Design",
       "Cloudflare Workers"
     ],
     "url": "https://asesoria-fiscal.lagoanadia.workers.dev"
-  },
-  {
-    "title": "Larder",
-    "description": "Product overview for a shared-fridge grocery app: the lista de la compra generates itself from what's actually in your fridge. Proyecto Transversal (2º DAM).",
-    "tags": [
-      "Product Design",
-      "React",
-      "TypeScript"
-    ],
-    "url": "larder/index.html"
-  },
-  {
-    "title": "Kook",
-    "description": "A recipe finder that turns loose fridge ingredients into real recipes, with AI-generated cooking tips.",
-    "tags": [
-      "React",
-      "Node.js",
-      "AI"
-    ],
-    "url": "https://kook-psi.vercel.app"
   }
 ]

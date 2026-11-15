@@ -95,6 +95,8 @@ fetch('projects.json')
   .then(function(response) { return response.json() })
   .then(function(data) {
     const workBody = document.querySelector('.work-body')
+    // replace the static fallback cards from index.html with the full list
+    workBody.innerHTML = ''
     data.forEach(function(project, index) {
       const div = document.createElement('div')
       div.classList.add('works')

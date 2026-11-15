@@ -2,7 +2,9 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nadia Lagoa Vilela — Polyglot DAM student.">
+<meta name="description" content="Nadia Lagoa Vilela — multilingual developer building web apps and client websites. Second-year DAM student, open to junior roles, internships and freelance projects.">
+<meta property="og:title" content="Nadia Lagoa Vilela">
+<meta property="og:description" content="Multilingual developer building web apps and client websites. Open to junior roles, internships and freelance projects.">
 <title>Nadia Lagoa Vilela</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +33,7 @@
       <span class="monogram">NLV</span>
       <div>
         <div class="sidebar-name">Nadia Lagoa Vilela</div>
-        <div class="sidebar-role">DAM student</div>
+        <div class="sidebar-role">Developer · DAM student</div>
       </div>
     </div>
     <ul class="sidebar-nav" style="list-style:none">
@@ -111,7 +113,7 @@
               <span class="red">function </span><span>nadia</span> <span class="yellow"> ( )</span><br>
               <span class="yellow">let </span><span>humanLanguages</span><span class="yellow"> [ ]</span><span>=</span><br>
               <span class="azul">'Spanish' 'German' 'English' </span><br>
-              <span class="azul">'Galician' 'French' </span><br>
+              <span class="azul">'Galician' 'French' 'Italian' 'Swedish' </span><br>
               <span class="yellow">let </span><span>machineLanguages</span><span class="yellow"> [ ]</span><span>=</span><br>
               <span class="azul">'JavaScript' 'TypeScript' 'HTML&amp;CSS' 'Java' 'SQL' </span><br>
               <span class="azul">'Python' </span><br>
@@ -149,7 +151,33 @@
           <em>built</em>
         </h1>
       </div>
-      <div class="work-body"></div>
+      <div class="work-body">
+        <!-- top projects in plain HTML so crawlers and link previews see them; script.js replaces them with the full list from projects.json -->
+        <div class="works" style="background:var(--card-orange)">
+          <span class="project-num">01</span>
+          <div class="project-info">
+            <a href="https://synapticnotes.app" target="_blank" class="project-title">Synaptic</a>
+            <p class="project-desc">A capture-first learning app: dump raw notes as text, images or voice, and AI organizes them into structured pages with key concepts, a concept map per topic and short daily reviews.</p>
+            <div class="project-tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Postgres</span><span class="tag">AI</span></div>
+          </div>
+        </div>
+        <div class="works" style="background:var(--card-red)">
+          <span class="project-num">02</span>
+          <div class="project-info">
+            <a href="https://cadence-organized-life.vercel.app" target="_blank" class="project-title">Cadence</a>
+            <p class="project-desc">A calm, mobile-first personal growth app: agenda, routines, home chores, reading, movement and quick expenses in one place, with an AI assistant that turns what you say into tasks.</p>
+            <div class="project-tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Prisma</span><span class="tag">AI</span></div>
+          </div>
+        </div>
+        <div class="works" style="background:var(--card-blue)">
+          <span class="project-num">03</span>
+          <div class="project-info">
+            <a href="https://gridcast-schedule.vercel.app" target="_blank" class="project-title">GridCast</a>
+            <p class="project-desc">Upload once, publish everywhere: schedule your social media posts from a single place.</p>
+            <div class="project-tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">OAuth</span></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="skills-grid reveal" id="skills">
@@ -168,32 +196,35 @@
 
           <div class="part reveal">
             <p><em>LANGUAGES</em></p>
-            <div class="skill-row"><span>Java</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>HTML &amp; CSS</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span></div></div>
-            <div class="skill-row"><span>JavaScript</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>SQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>TypeScript</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>Python</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>React</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>TypeScript</span><span class="skill-proof">Synaptic · Cadence</span></div>
+            <div class="skill-row"><span>JavaScript</span><span class="skill-proof">Kook · Lagoa</span></div>
+            <div class="skill-row"><span>React</span><span class="skill-proof">Kook · Larder</span></div>
+            <div class="skill-row"><span>HTML &amp; CSS</span><span class="skill-proof">Yutori · Iago · Lagoa</span></div>
+            <div class="skill-row"><span>Java</span><span class="skill-proof">Proyecto X · DAM</span></div>
+            <div class="skill-row"><span>SQL</span><span class="skill-proof">Synaptic · DAM</span></div>
+            <div class="skill-row"><span>Python</span><span class="skill-proof">DAM coursework</span></div>
           </div>
 
           <div class="part reveal">
             <p><em>TOOLS</em></p>
-            <div class="skill-row"><span>Git &amp; GitHub</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>IntelliJ / VS Code</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>MySQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>Next.js</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>Node.js</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
-            <div class="skill-row"><span>PostgreSQL</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>Next.js</span><span class="skill-proof">Synaptic · Cadence · GridCast</span></div>
+            <div class="skill-row"><span>Node.js</span><span class="skill-proof">Kook</span></div>
+            <div class="skill-row"><span>PostgreSQL</span><span class="skill-proof">Synaptic</span></div>
+            <div class="skill-row"><span>Prisma</span><span class="skill-proof">Cadence</span></div>
+            <div class="skill-row"><span>Astro</span><span class="skill-proof">Yutori</span></div>
+            <div class="skill-row"><span>Cloudflare &amp; Vercel</span><span class="skill-proof">All live projects</span></div>
+            <div class="skill-row"><span>Git &amp; GitHub</span><span class="skill-proof">Every project</span></div>
           </div>
 
           <div class="part reveal">
             <p><em>HUMAN LANGUAGES</em></p>
-            <div class="skill-row"><span>Galician</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
-            <div class="skill-row"><span>Spanish</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
-            <div class="skill-row"><span>English</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div></div>
-            <div class="skill-row"><span>German</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span></div></div>
-            <div class="skill-row"><span>French</span><div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot half"></span><span class="dot empty"></span></div></div>
+            <div class="skill-row"><span>Galician</span><span class="skill-proof">Native</span></div>
+            <div class="skill-row"><span>Spanish</span><span class="skill-proof">Native</span></div>
+            <div class="skill-row"><span>English</span><span class="skill-proof">Fluent</span></div>
+            <div class="skill-row"><span>German</span><span class="skill-proof">Fluent · Swiss Matura</span></div>
+            <div class="skill-row"><span>French</span><span class="skill-proof">Advanced</span></div>
+            <div class="skill-row"><span>Italian</span><span class="skill-proof">Beginner</span></div>
+            <div class="skill-row"><span>Swedish</span><span class="skill-proof">Basic</span></div>
           </div>
 
           <div class="part reveal">
@@ -219,26 +250,36 @@
       <div class="exp-timeline reveal" style="transition-delay: 0.2s">
         <div class="exp-item">
           <span class="exp-index">(01)</span>
-          <div class="exp-date">2025 – Present</div>
+          <div class="exp-date">2026 – Present</div>
           <div>
-            <div class="exp-role">DAM Student</div>
-            <div class="exp-company">Desarrollo de Aplicaciones Multiplataforma · Spain</div>
-            <div class="exp-desc">First year of a Higher Vocational Training in cross-platform app development. Building foundations in Java, databases, interfaces, and systems. Finishing year one in a few months.</div>
+            <div class="exp-role">Freelance web developer</div>
+            <div class="exp-company">Lagoa · Estudio digital · A Coruña &amp; remote</div>
+            <div class="exp-desc">Designing, building and shipping websites for real clients: <a href="https://yutori.lagoanadia.workers.dev" target="_blank" rel="noopener">Yutori Espacio Creativo</a>, a creative workshop space in A Coruña (class listings, gift vouchers and its own admin panel), and <a href="https://asesoria-fiscal.lagoanadia.workers.dev" target="_blank" rel="noopener">Iago</a>, an online tax advisor. From the first call and a fixed quote to deployment on Cloudflare and ongoing changes, all handled directly with the client.</div>
           </div>
           <span class="exp-arrow">→</span>
         </div>
         <div class="exp-item">
           <span class="exp-index">(02)</span>
-          <div class="exp-date">Switzerland · Years of service</div>
+          <div class="exp-date">2025 – Present</div>
           <div>
-            <div class="exp-role">Waitress</div>
-            <div class="exp-company">Hospitality · Spain</div>
-            <div class="exp-desc">Served in multilingual environments across Northern Spain. Learnt to read a room in seconds, switch between Spanish, German, French, and English mid-service, stay composed under real pressure, and deliver without excuses. The best UX training I never expected.</div>
+            <div class="exp-role">DAM Student</div>
+            <div class="exp-company">Desarrollo de Aplicaciones Multiplataforma · Spain</div>
+            <div class="exp-desc">Second year of a Higher Vocational Training in cross-platform app development: Java, databases, interfaces and systems, plus the Larder group project. Graduating in 2027.</div>
           </div>
           <span class="exp-arrow">→</span>
         </div>
         <div class="exp-item">
           <span class="exp-index">(03)</span>
+          <div class="exp-date">Seasonal work</div>
+          <div>
+            <div class="exp-role">Waitress</div>
+            <div class="exp-company">Hospitality · Northern Spain</div>
+            <div class="exp-desc">Served in multilingual environments across Northern Spain. Learnt to read a room in seconds, switch between Spanish, German, French, and English mid-service, stay composed under real pressure, and deliver without excuses. The best UX training I never expected.</div>
+          </div>
+          <span class="exp-arrow">→</span>
+        </div>
+        <div class="exp-item">
+          <span class="exp-index">(04)</span>
           <div class="exp-date">2012 – 2024</div>
           <div>
             <div class="exp-role">Life in Switzerland</div>
@@ -248,11 +289,11 @@
           <span class="exp-arrow">→</span>
         </div>
         <div class="exp-item">
-          <span class="exp-index">(04)</span>
+          <span class="exp-index">(05)</span>
           <div class="exp-date">Ongoing</div>
           <div>
             <div class="exp-role">Self-directed learner</div>
-            <div class="exp-company">French, Italian, Swedish,</div>
+            <div class="exp-company">French · Italian · Swedish</div>
             <div class="exp-desc">Learnt French through Camus and Sartre — reading originals before translations. Italian through annual trips as a family interpreter. Currently learning Swedish independently. Every language a new operating system for the mind.</div>
           </div>
           <span class="exp-arrow">→</span>
@@ -269,8 +310,8 @@
             Say <em>hello</em><br>in any language
           </h2>
           <p class="contact-sub">
-            I'm open to internships, collaborations,<br>
-            and interesting conversations.
+            Open to junior roles, internships<br>
+            and freelance projects.
           </p>
           <div class="contact-links">
             <a href="mailto:lagoanadia@gmail.com" class="contact-link primary btn btn-white email-trigger">
@@ -287,16 +328,16 @@
 
         <div class="lang-ticker">
           <div class="lang-track">
-            <div class="lang-item">Galician <span>· Nativa ·</span></div>
-            <div class="lang-item">Español <span>· Fluente ·</span></div>
+            <div class="lang-item">Galego <span>· Nativo ·</span></div>
+            <div class="lang-item">Español <span>· Nativo ·</span></div>
             <div class="lang-item">English <span>· Fluent ·</span></div>
             <div class="lang-item">Deutsch <span>· Fließend ·</span></div>
             <div class="lang-item">Français <span>· Avancé ·</span></div>
             <div class="lang-item">Italiano <span>· Principiante ·</span></div>
             <div class="lang-item">Svenska <span>· Grundläggande ·</span></div>
             <!-- Duplicate for seamless loop -->
-            <div class="lang-item">Galician <span>· Nativa ·</span></div>
-            <div class="lang-item">Español <span>· Fluente ·</span></div>
+            <div class="lang-item">Galego <span>· Nativo ·</span></div>
+            <div class="lang-item">Español <span>· Nativo ·</span></div>
             <div class="lang-item">English <span>· Fluent ·</span></div>
             <div class="lang-item">Deutsch <span>· Fließend ·</span></div>
             <div class="lang-item">Français <span>· Avancé ·</span></div>

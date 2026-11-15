@@ -538,3 +538,8 @@ footer { display: flex; justify-content: space-between; align-items: center; pad
   .java-selector { padding: 0 20px 24px; }
   .project-viewer { grid-template-columns: 1fr; padding: 0 20px 64px; gap: 28px; }
 }
+
+/* skills: technology + where it was used, instead of rating dots */
+.skill-row { gap: 16px; }
+.skill-proof { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; color: var(--label); text-align: right; }
+.exp-desc a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

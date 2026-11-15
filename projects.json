@@ -1,70 +1,147 @@
 [
   {
-    "title": "Cadence",
-    "description": "A calm, mobile-first personal growth app for people with many interests: agenda, routines, home chores, reading, movement and quick expenses in one place. An AI assistant turns what you say or type into tasks and expenses you confirm. Installable PWA.",
-    "tags": ["Next.js", "TypeScript", "Prisma", "AI"],
-    "url": "https://cadence-amber-iota.vercel.app"
+    "title": "Synaptic",
+    "description": "A capture-first learning app: dump raw notes as text, images or voice, and AI organizes them into structured pages with highlighted key concepts, an interactive concept map per topic and short daily review sessions focused on what you haven't mastered yet. Google Classroom and Calendar integrations, multilingual, installable PWA, built solo end-to-end.",
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Postgres",
+      "AI"
+    ],
+    "url": "https://synapticnotes.app"
   },
   {
-    "title": "Synaptic",
-    "description": "A capture-first learning app: dump raw notes as text, images, or voice, and let AI organize them into structured, searchable pages. Full-text search, a RAG-based chat over your own notes, and spaced-repetition flashcards, built solo end-to-end as an installable PWA.",
-    "tags": ["Next.js", "TypeScript", "Postgres", "AI"],
-    "url": "https://synaptic-ruby.vercel.app"
+    "title": "Cadence",
+    "description": "A calm, mobile-first personal growth app for people with many interests: agenda, routines, home chores, reading, movement and quick expenses in one place. An AI assistant turns what you say or type into tasks and expenses you confirm. Installable PWA.",
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "AI"
+    ],
+    "url": "https://cadence-organized-life.vercel.app"
+  },
+  {
+    "title": "GridCast",
+    "description": "Upload once, publish everywhere: schedule your social media posts from a single place. Google sign-in, and every user only ever sees their own content.",
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "OAuth"
+    ],
+    "url": "https://gridcast-schedule.vercel.app"
+  },
+  {
+    "title": "Lagoa · Estudio digital",
+    "description": "My freelance studio site: websites with bookings, WhatsApp assistants, online shops and Google Maps presence for local businesses, each with a live demo you can try before hiring.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "url": "https://lagoa-webs.vercel.app"
+  },
+  {
+    "title": "Yutori Espacio Creativo",
+    "description": "Website for a creative workshop space in A Coruña: watercolour, crochet, sewing and embroidery classes, monthly workshops, private sessions and gift vouchers, with its own admin panel.",
+    "tags": [
+      "Astro",
+      "Cloudflare Workers"
+    ],
+    "url": "https://yutori.lagoanadia.workers.dev"
+  },
+  {
+    "title": "Iago · Asesor fiscal",
+    "description": "Website for an online tax advisor: tax returns, self-employed paperwork, inheritances and grants, explained without jargon. Bilingual (ES/CA) with playful draggable stickers.",
+    "tags": [
+      "Web Design",
+      "Cloudflare Workers"
+    ],
+    "url": "https://asesoria-fiscal.lagoanadia.workers.dev"
   },
   {
     "title": "Larder",
     "description": "Product overview for a shared-fridge grocery app: the lista de la compra generates itself from what's actually in your fridge. Proyecto Transversal (2º DAM).",
-    "tags": ["Product Design", "React", "TypeScript"],
+    "tags": [
+      "Product Design",
+      "React",
+      "TypeScript"
+    ],
     "url": "larder/index.html"
   },
   {
     "title": "Kook",
     "description": "A recipe finder that turns loose fridge ingredients into real recipes, with AI-generated cooking tips.",
-    "tags": ["React", "Node.js", "AI"],
+    "tags": [
+      "React",
+      "Node.js",
+      "AI"
+    ],
     "url": "https://kook-psi.vercel.app"
   },
   {
     "title": "Proyecto X",
     "description": "A household task management app built around Java OOP principles.",
-    "tags": ["Java", "OOP"],
+    "tags": [
+      "Java",
+      "OOP"
+    ],
     "url": "https://github.com/lagoanadia/Proyecto-X"
   },
   {
     "title": "Twitter Replica",
     "description": "A Twitter-like interface with randomly generated posts.",
-    "tags": ["JavaScript", "DOM"],
+    "tags": [
+      "JavaScript",
+      "DOM"
+    ],
     "url": "../web/Twitter/index.html"
   },
   {
     "title": "Profile Upload Demo",
     "description": "File handling and real-time profile picture preview.",
-    "tags": ["JavaScript", "CSS", "File API"],
+    "tags": [
+      "JavaScript",
+      "CSS",
+      "File API"
+    ],
     "url": "../web/Upload/index.html"
   },
   {
     "title": "MultiGames",
     "description": "Two browser games in one site. State management and game loop logic.",
-    "tags": ["JavaScript", "CSS"],
+    "tags": [
+      "JavaScript",
+      "CSS"
+    ],
     "url": "../web/MultiGames/index.html"
   },
   {
     "title": "TicTacToe Java",
     "description": "Classic game from scratch. Win detection and turn management.",
-    "tags": ["JavaScript", "HTML"],
+    "tags": [
+      "JavaScript",
+      "HTML"
+    ],
     "url": "java.html"
   },
   {
     "title": "Calculator Java",
     "description": "A calculator built in Java. First structured OOP program.",
-    "tags": ["Java", "OOP"],
+    "tags": [
+      "Java",
+      "OOP"
+    ],
     "url": "java.html"
-    
   },
   {
     "title": "Lightbulbs",
     "description": "A simple exercise to learn about DOM manipulation.",
-    "tags": ["HTML", "DOM", "JS"],
+    "tags": [
+      "HTML",
+      "DOM",
+      "JS"
+    ],
     "url": "../../web/Lightbulbs/index.html"
-
   }
 ]

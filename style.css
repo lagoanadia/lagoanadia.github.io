@@ -474,7 +474,14 @@ footer { display: flex; justify-content: space-between; align-items: center; pad
   .mobile-menu.open { display: flex; }
   .mobile-menu-close { align-self: flex-end; width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--line); background: none; font-size: 20px; cursor: pointer; margin-bottom: 24px; }
   .mobile-menu a { font-family: var(--font-display); font-weight: 600; font-size: 30px; padding: 12px 4px; letter-spacing: -0.02em; }
-  .hero-canvas { display: grid; grid-template-columns: 1fr; }
+  .hero-canvas { display: grid; grid-template-columns: 1fr; grid-template-rows: auto; }
+  .hero-cell { min-height: 0; }
+  .hero-canvas > .hero-cell:empty, .hero-tl, .center-dot, .hero-grid-h { display: none; }
+  .hero-tr { border-bottom: 1px solid var(--line); }
+  .topbar { padding: 16px 20px; gap: 12px; }
+  .scroll-section { display: none !important; }
+  .hero { padding-bottom: 56px; }
+  .work { padding-top: 56px; padding-bottom: 56px; }
   .hero-grid-v { display: none; }
   .hero-tl, .hero-tr, .hero-bl { border-right: none; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -488,7 +495,11 @@ footer { display: flex; justify-content: space-between; align-items: center; pad
 
 @media (max-width: 640px) {
   .hero, .work, .skills-grid, #experience, #contact { padding-left: 18px; padding-right: 18px; }
-  .hero-cell { padding: 24px; }
+  .hero-cell { padding: 24px 20px; }
+  .hero-bl .code-window { width: 100%; }
+  .code-window .code { font-size: 12px; overflow-x: auto; }
+  .hero-buttons .btn { flex: 1 1 auto; justify-content: center; }
+  .status-pill { font-size: 10px; padding: 7px 14px 7px 10px; }
   .hero-bottom { padding: 32px 24px; }
   .contact-links { flex-direction: column; width: 100%; }
   .contact-links .btn { width: 100%; justify-content: center; }

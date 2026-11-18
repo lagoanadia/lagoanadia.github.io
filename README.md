@@ -1,18 +1,28 @@
-# lagoanadia.github.io
+# 💼 lagoanadia.github.io
 
 My personal portfolio — designed and built from scratch with vanilla HTML, CSS and JavaScript. No frameworks, no build tools, no shortcuts.
 
 **[lagoanadia.github.io →](https://lagoanadia.github.io)**
 
----
-
-## What it is
-
 A single-page portfolio designed to feel like reading someone, not scanning a CV. The copy, layout and interactions are intentional: every section tries to say something about how I think, not just what I've done.
 
----
+## 📁 Project Structure
 
-## Technical breakdown
+```
+├── index.html        → Main portfolio page
+├── java.html         → Java projects viewer
+├── style.css         → All styles (shared across both pages)
+├── script.js         → Intersection Observer + fetch + DOM rendering
+├── java.js           → Java page: project data, selector, slideshow
+├── projects.json     → Project data source for the work section
+├── cv.pdf            → Downloadable CV
+├── DESIGN_PROMPT.md  → Design brief for the portfolio
+├── img/              → Screenshots for the Java project viewer
+├── Weather/, larder/ → Hosted demos of other projects
+└── web/              → Hosted copies of web projects: Lightbulbs, MultiGames, Twitter, Upload
+```
+
+## 🚀 How It Works
 
 ### Scroll reveal with Intersection Observer API
 
@@ -83,29 +93,25 @@ Three deliberate font choices loaded from Google Fonts:
 
 The layout uses CSS Grid throughout. On mobile (≤768px): the nav collapses, the hero drops to a single column (the code window disappears), the skills and experience grids restack vertically, and the Java project viewer goes single column.
 
----
+## 🧠 Key Concepts
 
-## Structure
+- **Intersection Observer API** — scroll-triggered reveals without scroll listeners
+- **Fetch API + JSON** — data-driven project list
+- **DOM rendering** — building cards and slideshows from data
+- **CSS custom properties, `clamp()`, Grid, sticky positioning, animations**
+- **Responsive design** — mobile layout at ≤768px
+- **Typography** — Google Fonts (Inter Tight, Instrument Serif, JetBrains Mono)
+- **Zero dependencies, zero build step** — deployed on GitHub Pages
 
+## 🛠️ How To Run
+
+Because `projects.json` is loaded with `fetch`, serve the folder instead of opening the file directly:
+
+```bash
+npx serve .
 ```
-├── index.html        → Main portfolio page
-├── java.html         → Java projects viewer
-├── style.css         → All styles (shared across both pages)
-├── script.js         → Intersection Observer + fetch + DOM rendering
-├── java.js           → Java page: project data, selector, slideshow
-├── projects.json     → Project data source for the work section
-└── img/              → Screenshots for the Java project viewer
-```
 
----
-
-## Built with
-
-- HTML, CSS, JavaScript — zero dependencies, zero build step
-- Intersection Observer API
-- Fetch API
-- Google Fonts (Inter Tight, Instrument Serif, JetBrains Mono)
-- GitHub Pages
+Live at **[lagoanadia.github.io](https://lagoanadia.github.io)** — every push to `main` is published by GitHub Pages.
 
 ---
 
